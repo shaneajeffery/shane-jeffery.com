@@ -1,0 +1,5 @@
+{
+    "hooks": {
+        "pre-commit": "cross-env CI=true lint-staged"
+    }
+}

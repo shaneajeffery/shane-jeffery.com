@@ -1,0 +1,6 @@
+{
+    "public/**/*.{json}": ["prettier --write", "git add"],
+    "scripts/**/*.{js}": ["prettier --write", "git add"],
+    "src/**/*.{json}": ["prettier --write", "git add"],
+    "src/**/*.{tsx,ts}": ["npm run test -- --bail --findRelatedTests", "npm run lintAndFix", "prettier --write", "git add"]
+}
