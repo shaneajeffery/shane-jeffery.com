@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import logo from './logo.svg';
-import './App.css';
 
 const App = (): ReactElement => {
     return (
