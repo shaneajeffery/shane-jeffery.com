@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-export const Loader = (): ReactElement => {
+const Loader = (): ReactElement => {
     return (
         <div className="loader" id="page-loader">
             <div className="loading-wrapper">
@@ -15,3 +15,5 @@ export const Loader = (): ReactElement => {
         </div>
     );
 };
+
+export default Loader;

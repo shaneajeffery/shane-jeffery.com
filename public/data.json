@@ -1,0 +1,24 @@
+{
+    "name": "Shane Jeffery",
+    "email": "shane.jeffery54@gmail.com",
+    "title": "Full Stack Engineer (React | Ruby, Node, PHP)",
+    "bio": "Senior Full Stack Engineer and Technical Lead with a passion for delivering scalable solutions to complex business problems. Demonstrated success building up technical teams from scratch as well as joining existing teams to optimize technical workflows and ensure business processes are designed for success. Extensive background working with diverse and fast-growing teams in companies of all sizes. ",
+    "born": "May 4, 1986 - Mesa, AZ, USA",
+    "linkedin": "https://www.linkedin.com/in/shanejeffery86/",
+    "facebook": "https://www.facebook.com/shane.jeffery.9",
+    "github": "https://github.com/shaneajeffery",
+    "education": [
+        {
+            "title": "College",
+            "universityName": "California State University - Sacramento",
+            "graduationDate": "December 2012",
+            "description": ""
+        },
+        {
+            "title": "High School",
+            "universityName": "Folsom High School",
+            "graduationDate": "June 2004",
+            "description": ""
+        }
+    ]
+}
