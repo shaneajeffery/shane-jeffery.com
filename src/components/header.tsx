@@ -55,7 +55,7 @@ const Header = () => {
                                 >
                                     <a
                                         className={`mx-2.5 flex  cursor-pointer items-center rounded-md bg-white from-theme1 to-theme2 py-2.5 font-poppins text-xtiny
-                     font-medium text-gray-lite transition-all duration-300 ease-in-out hover:bg-gradient-to-r dark:bg-[#212425] dark:text-[#A6A6A6]  dark:hover:text-black md:px-4 xl:px-5 `}
+                     font-medium text-gray-lite transition-all duration-300 ease-in-out hover:bg-gradient-to-r dark:bg-[#212425] dark:text-theme1  dark:hover:text-black md:px-4 xl:px-5 `}
                                         href={item?.link}
                                     >
                                         <span className="mr-2 text-xl">
