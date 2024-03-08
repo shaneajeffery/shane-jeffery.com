@@ -4,12 +4,12 @@ import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 
 const Markdown = ({ content, inline }) => (
-    <ReactMarkdown
-        components={{ p: inline ? React.Fragment : 'p' }}
-        remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeRaw]}
-    >
-        {content}
-    </ReactMarkdown>
+  <ReactMarkdown
+    components={{ p: inline ? React.Fragment : 'p' }}
+    remarkPlugins={[remarkGfm]}
+    rehypePlugins={[rehypeRaw]}
+  >
+    {content}
+  </ReactMarkdown>
 );
 export default Markdown;

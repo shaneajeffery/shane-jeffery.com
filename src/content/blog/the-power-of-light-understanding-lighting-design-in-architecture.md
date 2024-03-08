@@ -20,4 +20,4 @@ In conclusion, understanding the power of light is essential for architects and 
 
 **References:**
 
--   [Architectural Lighting Magazine](https://www.archlighting.com)
+- [Architectural Lighting Magazine](https://www.archlighting.com)

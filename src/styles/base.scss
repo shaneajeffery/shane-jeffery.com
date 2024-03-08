@@ -1,48 +1,48 @@
 :root {
-    color-scheme: dark;
+  color-scheme: dark;
 }
 
 body::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 body::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 body::-webkit-scrollbar-thumb {
-    background: #555;
-    border-radius: 16px;
+  background: #555;
+  border-radius: 16px;
 }
 body::-webkit-scrollbar-thumb:hover {
-    background: #888;
+  background: #888;
 }
 
 html {
-    @apply overflow-x-hidden;
+  @apply overflow-x-hidden;
 }
 
 // noice background
 main,
 footer,
 .page-banner {
-    &::after {
-        @apply pointer-events-none absolute left-0 top-0 z-[-99999] h-full w-full bg-[url("/images/noise.webp")] opacity-75 mix-blend-overlay content-[''];
-    }
+  &::after {
+    @apply pointer-events-none absolute left-0 top-0 z-[-99999] h-full w-full bg-[url("/images/noise.webp")] opacity-75 mix-blend-overlay content-[''];
+  }
 }
 footer {
-    &::after {
-        @apply opacity-10;
-    }
+  &::after {
+    @apply opacity-10;
+  }
 }
 
 // update container
 @media (min-width: 1536px) {
-    .container {
-        max-width: 1280px !important;
-    }
+  .container {
+    max-width: 1280px !important;
+  }
 }
 
 // stretched link
 .stretched-link::after {
-    content: '';
-    @apply pointer-events-auto absolute inset-0 z-10 bg-transparent;
+  content: '';
+  @apply pointer-events-auto absolute inset-0 z-10 bg-transparent;
 }

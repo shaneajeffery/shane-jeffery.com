@@ -7,17 +7,17 @@ color: '#67A94C'
 category: 'Branding'
 
 projectInfo:
-    - title: 'Client'
-      data: 'Southpole'
-    - title: 'Timeline'
-      data: '3 Months'
-    - title: 'Services'
-      data: |
-          - Branding
-          - Website design
-          - Marketing and Planning
-    - title: 'website'
-      data: 'https://aver.io'
+  - title: 'Client'
+    data: 'Southpole'
+  - title: 'Timeline'
+    data: '3 Months'
+  - title: 'Services'
+    data: |
+      - Branding
+      - Website design
+      - Marketing and Planning
+  - title: 'website'
+    data: 'https://aver.io'
 ---
 
 ## We couldn't be happier with the branding strategy developed.

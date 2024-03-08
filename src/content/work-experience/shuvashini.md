@@ -7,17 +7,17 @@ color: '#307B93'
 category: 'Art'
 
 projectInfo:
-    - title: 'Client'
-      data: 'BocahKecil'
-    - title: 'Timeline'
-      data: '3 Months'
-    - title: 'Services'
-      data: |
-          - Branding
-          - Website design
-          - Marketing and Planning
-    - title: 'website'
-      data: 'https://aver.io'
+  - title: 'Client'
+    data: 'BocahKecil'
+  - title: 'Timeline'
+    data: '3 Months'
+  - title: 'Services'
+    data: |
+      - Branding
+      - Website design
+      - Marketing and Planning
+  - title: 'website'
+    data: 'https://aver.io'
 ---
 
 ## We couldn't be happier with the branding strategy developed.

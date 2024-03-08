@@ -21,14 +21,14 @@ Furthermore, sustainable architecture promotes the use of eco-friendly materials
 
 ```javascript
 useEffect(() => {
-    const activeLink = navRef.current.querySelector('.active');
-    if (activeLink) {
-        activeLinkRef.current = activeLink;
-        setIndicatorPosition({
-            left: activeLink.offsetLeft,
-            width: activeLink.offsetWidth,
-        });
-    }
+  const activeLink = navRef.current.querySelector('.active');
+  if (activeLink) {
+    activeLinkRef.current = activeLink;
+    setIndicatorPosition({
+      left: activeLink.offsetLeft,
+      width: activeLink.offsetWidth,
+    });
+  }
 }, [mainMenu]);
 ```
 
@@ -60,10 +60,10 @@ _You **can** combine them_
 
 ### Unordered
 
--   Item 1
--   Item 2
--   Item 2a
--   Item 2b
+- Item 1
+- Item 2
+- Item 2a
+- Item 2b
 
 ### Ordered
 

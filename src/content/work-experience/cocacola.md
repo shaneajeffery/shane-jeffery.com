@@ -7,17 +7,17 @@ color: '#BE0000'
 category: 'Product'
 
 projectInfo:
-    - title: 'Client'
-      data: 'CocaCola'
-    - title: 'Timeline'
-      data: '2 Months'
-    - title: 'Services'
-      data: |
-          - Branding
-          - Website design
-          - Marketing and Planning
-    - title: 'website'
-      data: 'https://aver.io'
+  - title: 'Client'
+    data: 'CocaCola'
+  - title: 'Timeline'
+    data: '2 Months'
+  - title: 'Services'
+    data: |
+      - Branding
+      - Website design
+      - Marketing and Planning
+  - title: 'website'
+    data: 'https://aver.io'
 ---
 
 ## We couldn't be happier with the branding strategy developed.
