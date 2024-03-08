@@ -1,24 +1,14 @@
 ---
 banner:
-    first_name: 'Charlie'
-    last_name: 'Edward'
+    first_name: 'Shane'
+    last_name: 'Jeffery'
     image: '/images/author.jpg'
-    bg_text: 'Charlie'
+    bg_text: 'Shane'
     description: |
         A front-end developer, UI designer, and all-around doodler who enjoys developing accessible, usable and engaging websites & apps that bring your products to life.
 
-featuredBy:
-    enable: true
-    title: 'As Featured By'
-    brands_white:
-        - '/images/brands/01-white.svg'
-        - '/images/brands/02-white.svg'
-        - '/images/brands/03-white.svg'
-        - '/images/brands/04-white.svg'
-        - '/images/brands/05-white.svg'
-
 workProcess:
-    enable: true
+    enable: false
     title: 'Process Delivers Value'
     subtitle: 'The approach'
     steps:

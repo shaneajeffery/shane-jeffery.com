@@ -5,9 +5,9 @@ import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import ProjectCard from '@/blocks/ProjectCard';
 import Image from 'next/image';
 
-const ProjectPage = ({
-    nextProject,
-    currentProject: { frontMatter, content },
+const WorkExperiencePage = ({
+    nextWorkExperience,
+    currentWorkExperience: { frontMatter, content },
 }) => {
     // Current Project frontMatter
     const { title, image, description, category, projectInfo } = frontMatter;
@@ -76,16 +76,16 @@ const ProjectPage = ({
                 <div className="container">
                     <div className="mb-16">
                         <h2 className="-mt-[6px] text-center font-secondary text-4xl font-medium md:text-5xl">
-                            Next Project
+                            Next Work Experience
                         </h2>
                     </div>
                     <div className="row justify-center">
                         <div className="lg:col-6">
-                            {nextProject && (
+                            {nextWorkExperience && (
                                 <ProjectCard
                                     index={0}
-                                    slug={nextProject.slug}
-                                    frontMatter={nextProject.frontMatter}
+                                    slug={nextWorkExperience.slug}
+                                    frontMatter={nextWorkExperience.frontMatter}
                                     twoColumns={true}
                                 />
                             )}
@@ -97,13 +97,15 @@ const ProjectPage = ({
     );
 };
 
-export default ProjectPage;
+export default WorkExperiencePage;
 
 export const getStaticPaths = async () => {
-    const allProjects = getDirectoryPages('./src/content/project');
-    const paths = allProjects.map((project) => ({
+    const allWorkExperiences = getDirectoryPages(
+        './src/content/work-experience'
+    );
+    const paths = allWorkExperiences.map((we) => ({
         params: {
-            slug: project.slug,
+            slug: we.slug,
         },
     }));
 
@@ -114,16 +116,21 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params: { slug } }) => {
-    const allProjects = getDirectoryPages('./src/content/project');
+    const allWorkExperiences = getDirectoryPages(
+        './src/content/work-experience'
+    );
 
-    const currentIndex = allProjects.findIndex((item) => item.slug == slug);
-    const currentProject = allProjects[currentIndex];
-    const nextProject = allProjects[currentIndex + 1] || allProjects[0];
+    const currentIndex = allWorkExperiences.findIndex(
+        (item) => item.slug == slug
+    );
+    const currentWorkExperience = allWorkExperiences[currentIndex];
+    const nextWorkExperience =
+        allWorkExperiences[currentIndex + 1] || allWorkExperiences[0];
 
     return {
         props: {
-            currentProject: currentProject,
-            nextProject: nextProject,
+            currentWorkExperience: currentWorkExperience,
+            nextWorkExperience: nextWorkExperience,
         },
     };
 };

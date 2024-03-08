@@ -1,4 +1,4 @@
 ---
-title: 'My weekly thoughts'
+title: 'My astute observations'
 subtitle: 'Blog'
 ---

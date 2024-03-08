@@ -148,43 +148,6 @@ const About = ({ aboutPage }) => {
                 </div>
             </section>
 
-            {featuredBy.enable && (
-                <section className="overflow-hidden bg-white pb-24 pt-10 text-dark">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 mb-10">
-                                <h2
-                                    className="text-center font-secondary text-3xl font-medium"
-                                    data-aos="fade"
-                                >
-                                    {featuredBy.title}
-                                </h2>
-                            </div>
-                            <div className="col-12">
-                                <div className="flex flex-wrap items-center justify-center">
-                                    {featuredBy.brands.map((item, index) => (
-                                        <div
-                                            key={index}
-                                            className="mx-8 my-4"
-                                            data-aos="fade-left"
-                                            data-aos-delay={index * 50}
-                                        >
-                                            <Image
-                                                src={item}
-                                                alt="Brand"
-                                                width={120}
-                                                height={80}
-                                                className="max-h-20 w-auto"
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            )}
-
             {services.enable && (
                 <section className="py-28">
                     <div className="container">

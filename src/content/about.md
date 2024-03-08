@@ -19,16 +19,6 @@ about:
     description: |
         My expertise and passion for technology drive me to craft solutions that are both aesthetically pleasing and functional. With years of experience, I excel in creating unique brands, designing websites that meet the needs of your clients.
 
-featuredBy:
-    enable: true
-    title: 'As Featured By'
-    brands:
-        - '/images/brands/01.svg'
-        - '/images/brands/02.svg'
-        - '/images/brands/03.svg'
-        - '/images/brands/04.svg'
-        - '/images/brands/05.svg'
-
 services:
     enable: true
     title: 'What I can do for you'

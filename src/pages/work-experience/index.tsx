@@ -5,25 +5,28 @@ import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { getSinglePage } from '@/libs/getSinglePage';
 import { useState } from 'react';
 
-const Project = ({ projectPage, allProjects }) => {
-    const totalProjects = allProjects.length;
-    const { title, subtitle } = projectPage.frontMatter;
+const WorkExperience = ({ workExperiencePage, allWorkExperiences }) => {
+    const totalWorkExperiences = allWorkExperiences.length;
+    const { title, subtitle } = workExperiencePage.frontMatter;
 
-    const projectsToShow = 6;
-    const [projects, setProjects] = useState(
-        allProjects.slice(0, projectsToShow)
+    const workExperiencesToShow = 6;
+    const [workExperiences, setWorkExperiences] = useState(
+        allWorkExperiences.slice(0, workExperiencesToShow)
     );
     const [loadMore, setLoadMore] = useState(true);
 
     const handleLoadMore = () => {
-        const currentLength = projects.length;
-        const postLoaded = projectsToShow + currentLength;
-        const isMore = currentLength < totalProjects;
+        const currentLength = workExperiences.length;
+        const postLoaded = workExperiencesToShow + currentLength;
+        const isMore = currentLength < totalWorkExperiences;
         const nextResults = isMore
-            ? allProjects.slice(currentLength, currentLength + projectsToShow)
+            ? allWorkExperiences.slice(
+                  currentLength,
+                  currentLength + workExperiencesToShow
+              )
             : [];
-        setProjects([...projects, ...nextResults]);
-        totalProjects < postLoaded && setLoadMore(false);
+        setWorkExperiences([...workExperiences, ...nextResults]);
+        totalWorkExperiences < postLoaded && setLoadMore(false);
     };
 
     return (
@@ -33,20 +36,18 @@ const Project = ({ projectPage, allProjects }) => {
             <section className="rounded-b-2xl bg-white py-28 text-dark">
                 <div className="container">
                     <div className="row gy-4 md:gx-4">
-                        {projects.map((project) => (
-                            <div
-                                key={project.slug}
-                                className="sm:col-6 lg:col-4"
-                            >
+                        {workExperiences.map((we) => (
+                            <div key={we.slug} className="sm:col-6 lg:col-4">
                                 <ProjectCard
-                                    slug={project.slug}
-                                    frontMatter={project.frontMatter}
+                                    slug={we.slug}
+                                    frontMatter={we.frontMatter}
                                 />
                             </div>
                         ))}
 
                         <div className="mt-16 text-center">
-                            {allProjects.length > projectsToShow && loadMore ? (
+                            {allWorkExperiences.length >
+                                workExperiencesToShow && loadMore ? (
                                 <button
                                     className="button button-dark"
                                     onClick={() => handleLoadMore()}
@@ -55,7 +56,7 @@ const Project = ({ projectPage, allProjects }) => {
                                 </button>
                             ) : (
                                 <p className="text-black/25">
-                                    No more projects to load
+                                    No more work experiences to load.
                                 </p>
                             )}
                         </div>
@@ -65,17 +66,21 @@ const Project = ({ projectPage, allProjects }) => {
         </Layout>
     );
 };
-export default Project;
+export default WorkExperience;
 
 // Export Props
 export const getStaticProps = () => {
-    const projectPage = getSinglePage('./src/content/project/_index.md');
-    const allProjects = getDirectoryPages('./src/content/project');
+    const workExperiencePage = getSinglePage(
+        './src/content/work-experience/_index.md'
+    );
+    const allWorkExperiences = getDirectoryPages(
+        './src/content/work-experience'
+    );
 
     return {
         props: {
-            projectPage: projectPage,
-            allProjects: allProjects,
+            workExperiencePage: workExperiencePage,
+            allWorkExperiences: allWorkExperiences,
         },
     };
 };

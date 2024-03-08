@@ -128,7 +128,7 @@ const Header = () => {
                     <div
                         className={`w-1/4 transition-all duration-300 ${isScrolled ? 'lg:-translate-x-8 lg:opacity-0' : ''}`}
                     >
-                        <Link href="/" className="inline-block align-middle">
+                        {/* <Link href="/" className="inline-block align-middle">
                             <Image
                                 src={logo}
                                 alt={logoText}
@@ -137,7 +137,7 @@ const Header = () => {
                                 quality={100}
                                 priority
                             />
-                        </Link>
+                        </Link> */}
                     </div>
                     <nav
                         ref={navRef}
