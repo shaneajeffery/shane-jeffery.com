@@ -1,12 +1,12 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 import Layout from '@/components/layout';
 import Markdown from '@/components/react-markdown';
 import SharePost from '@/components/share-post';
 import siteConfig from '@/config/site.config.json';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { formatDate } from '@/libs/utils/formatDate';
-
-import Image from 'next/image';
-import Link from 'next/link';
 
 const BlogPage = ({
   previousPost,
@@ -17,7 +17,7 @@ const BlogPage = ({
   const pageUrl = `${siteConfig.baseURL.replace(/\/$|$/, '/')}blog/${slug}`;
 
   return (
-    <Layout metaTitle={title} metaDescription={description} ogImage={image}>
+    <Layout metaTitle={title} metaDescription={description}>
       <section className="pb-28 pt-24">
         <div className="container">
           <div className="row justify-center">

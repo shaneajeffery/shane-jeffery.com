@@ -1,6 +1,12 @@
-import config from '@/config/site.config.json';
-
+import AOS from 'aos';
+import { useEffect } from 'react';
 import { Outfit } from 'next/font/google';
+import localFont from 'next/font/local';
+
+import config from '@/config/site.config.json';
+import '../styles/styles.scss';
+import 'aos/dist/aos.css';
+
 const outfit = Outfit({
   weight: ['200', '300', '400', '500'],
   display: 'swap',
@@ -8,16 +14,9 @@ const outfit = Outfit({
   variable: '--font-outfit',
 });
 
-import localFont from 'next/font/local';
 const melodrama = localFont({
   src: '../assets/fonts/melodrama/Melodrama-Variable.woff2',
 });
-
-import AOS from 'aos';
-import { useEffect } from 'react';
-
-import '../styles/styles.scss';
-import 'aos/dist/aos.css';
 
 const AverApp = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -28,10 +27,9 @@ const AverApp = ({ Component, pageProps }) => {
     });
   }, []);
 
-  const deviceIndicator = config.settings.deviceIndicator;
-
   return (
     <section
+      // @ts-ignore
       className={`${outfit.variable} ${melodrama.variable} font-primary`}
     >
       <Component {...pageProps} />

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface Props {
-  index: number;
+  index?: number;
   slug: string;
   frontMatter: Record<string, string>;
 }
@@ -16,7 +16,7 @@ const WorkExperiences = ({ index, slug, frontMatter }: Props) => {
         className="absolute bottom-0 left-0 z-30 h-full w-full duration-700 group-[.aos-animate]:h-0"
         style={{
           backgroundColor: color,
-          transitionDelay: `${index * 100}ms`,
+          transitionDelay: `${index ? index * 100 : 0}ms`,
         }}
       ></span>
       <Image

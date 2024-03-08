@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm';
 
 interface Props {
   content: string;
-  inline: boolean;
+  inline?: boolean;
 }
 
 const Markdown = ({ content, inline }: Props) => (

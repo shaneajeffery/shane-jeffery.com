@@ -27,7 +27,6 @@ const Privacy = ({ privacyPage }) => {
 
 export default Privacy;
 
-// Export Props
 export const getStaticProps = () => {
   const privacy = getSinglePage('./src/content/privacy.md');
 

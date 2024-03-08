@@ -14,15 +14,22 @@ const Header = () => {
   const { mainMenu } = menu;
   const mainMenuLength = mainMenu.length;
 
-  const [indicatorPosition, setIndicatorPosition] = useState(null);
+  // TODO: Fix the types on these and remove the <any>
+  const [indicatorPosition, setIndicatorPosition] = useState<any>();
   const navRef = useRef<any>(null);
   const activeLinkRef = useRef<any>(null);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileNavClose, setMobileNavClose] = useState(true);
+  const [isInvisible, setIsInvisible] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     const activeLink = navRef.current.querySelector('.active');
 
     if (activeLink) {
       activeLinkRef.current = activeLink;
+
       setIndicatorPosition({
         left: activeLink.offsetLeft,
         width: activeLink.offsetWidth,
@@ -30,8 +37,61 @@ const Header = () => {
     }
   }, [mainMenu]);
 
-  const handleLinkMouseEnter = (event) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const html = document.documentElement;
+    mobileNavClose
+      ? html.classList.remove('overflow-hidden')
+      : html.classList.add('overflow-hidden');
+  }, [mobileNavClose]);
+
+  useEffect(() => {
+    const banner = document.querySelector('.banner');
+    // @ts-ignore
+    const bannerScrollHeight = banner?.scrollHeight + 100;
+    const observer = new IntersectionObserver(
+      (entry) => {
+        window.addEventListener('scroll', () =>
+          entry[0].isIntersecting ? setIsActive(false) : setIsActive(true)
+        );
+
+        let lastScrollTop = 0;
+        const handleScroll = () => {
+          const currentScrollTop = document.documentElement.scrollTop;
+          if (
+            currentScrollTop > bannerScrollHeight &&
+            currentScrollTop > lastScrollTop
+          ) {
+            setIsInvisible(true);
+          } else {
+            setIsInvisible(false);
+          }
+
+          lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      },
+      { threshold: [0] }
+    );
+
+    banner && observer.observe(banner);
+  }, []);
+
+  const handleLinkMouseEnter = (event: { currentTarget: any }) => {
     const link = event.currentTarget;
+
     setIndicatorPosition({
       left: link.offsetLeft,
       width: link.offsetWidth,
@@ -47,74 +107,15 @@ const Header = () => {
     }
   };
 
-  const handleLinkClick = (event) => {
+  const handleLinkClick = (event: { currentTarget: any }) => {
     const link = event.currentTarget;
     activeLinkRef.current = link;
+
     setIndicatorPosition({
       left: link.offsetLeft,
       width: link.offsetWidth,
     });
   };
-
-  // Update Header element position on Scroll
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-  }, []);
-
-  // Open-Close Mobile Nav state
-  const [mobileNavClose, setMobileNavClose] = useState(true);
-  // disable scroll when mobile nav is open
-  useEffect(() => {
-    const html = document.documentElement;
-    mobileNavClose
-      ? html.classList.remove('overflow-hidden')
-      : html.classList.add('overflow-hidden');
-  }, [mobileNavClose]);
-
-  // Header Show Hide state
-  const [isInvisible, setIsInvisible] = useState(false);
-  // Header Active inActive state
-  const [isActive, setIsActive] = useState(false);
-
-  // Change Header background color on scroll
-  useEffect(() => {
-    const banner = document.querySelector('.banner');
-    const bannerScrollHeight = banner?.scrollHeight + 100;
-    const observer = new IntersectionObserver(
-      (entry) => {
-        window.addEventListener('scroll', () =>
-          entry[0].isIntersecting ? setIsActive(false) : setIsActive(true)
-        );
-
-        // Hide Header on scroll down and show on scroll up
-        let lastScrollTop = 0;
-        const handleScroll = () => {
-          const currentScrollTop = document.documentElement.scrollTop;
-          if (
-            currentScrollTop > bannerScrollHeight &&
-            currentScrollTop > lastScrollTop
-          ) {
-            setIsInvisible(true);
-          } else {
-            setIsInvisible(false);
-          }
-          lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-      },
-      { threshold: [0] }
-    );
-    banner && observer.observe(banner);
-  }, []);
 
   return (
     <header

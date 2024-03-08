@@ -5,11 +5,11 @@ import siteConfig from '@/config/site.config.json';
 import Head from 'next/head';
 
 interface Props {
-  metaTitle: string;
-  metaDescription: string;
-  metaKeyword: string;
-  className: string;
-  children: ReactNode;
+  metaTitle?: string;
+  metaDescription?: string;
+  metaKeyword?: string;
+  className?: string;
+  children?: ReactNode;
 }
 
 const Layout = ({

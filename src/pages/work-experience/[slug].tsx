@@ -2,18 +2,17 @@ import Layout from '@/components/layout';
 import Markdown from '@/components/react-markdown';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 
-import ProjectCard from '@/components/work-experience-card';
+import WorkExperienceCard from '@/components/work-experience-card';
 import Image from 'next/image';
 
 const WorkExperiencePage = ({
   nextWorkExperience,
   currentWorkExperience: { frontMatter, content },
 }) => {
-  // Current Project frontMatter
   const { title, image, description, category, projectInfo } = frontMatter;
 
   return (
-    <Layout metaTitle={title} metaDescription={description} ogImage={image}>
+    <Layout metaTitle={title} metaDescription={description}>
       <section className="pb-28 pt-24">
         <div className="container">
           <div className="banner row justify-center">
@@ -79,11 +78,10 @@ const WorkExperiencePage = ({
           <div className="row justify-center">
             <div className="lg:col-6">
               {nextWorkExperience && (
-                <ProjectCard
+                <WorkExperienceCard
                   index={0}
                   slug={nextWorkExperience.slug}
                   frontMatter={nextWorkExperience.frontMatter}
-                  twoColumns={true}
                 />
               )}
             </div>
@@ -116,6 +114,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const currentIndex = allWorkExperiences.findIndex(
     (item) => item.slug == slug
   );
+
   const currentWorkExperience = allWorkExperiences[currentIndex];
   const nextWorkExperience =
     allWorkExperiences[currentIndex + 1] || allWorkExperiences[0];

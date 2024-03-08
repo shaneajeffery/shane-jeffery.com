@@ -8,7 +8,6 @@ const Footer = () => {
   const { copyright, socialLinks } = siteConfig;
   const { footerMenu } = menu;
 
-  // get the page slug from the url
   const slug = useRouter().asPath;
   const [contactPage, setContactPage] = useState(false);
   useEffect(() => {
@@ -60,4 +59,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;

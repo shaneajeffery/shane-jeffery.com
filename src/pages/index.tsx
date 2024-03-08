@@ -7,8 +7,6 @@ import Banner from '@/components/banner';
 import BlogCard from '@/components/blog-card';
 import ProjectCard from '@/components/work-experience-card';
 
-import Image from 'next/image';
-
 const Home = ({
   homepage,
   workExperiencePage,
@@ -16,7 +14,7 @@ const Home = ({
   blogPage,
   blogPosts,
 }) => {
-  const { banner, featuredBy, workProcess } = homepage.frontMatter;
+  const { banner } = homepage.frontMatter;
 
   return (
     <Layout className="overflow-hidden">
@@ -77,6 +75,7 @@ const Home = ({
                 data-aos="fade-up-sm"
                 data-aos-duration="500"
                 style={{
+                  // @ts-ignore
                   '--lg-delay': `${(index % 3) * 75}ms`,
                   '--md-delay': `${(index % 2) * 75}ms`,
                   '--sm-delay': `${(index % 2) * 75}ms`,
@@ -99,7 +98,6 @@ const Home = ({
 };
 export default Home;
 
-// Export Props
 export const getStaticProps = () => {
   const homepage = getSinglePage('./src/content/_index.md');
   const workExperiencePage = getSinglePage(

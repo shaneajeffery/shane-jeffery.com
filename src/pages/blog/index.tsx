@@ -39,6 +39,7 @@ const Blog = ({ blogPage, blogPosts }) => {
                 data-aos="fade-up-sm"
                 data-aos-duration="500"
                 style={{
+                  // @ts-ignore
                   '--lg-delay': `${(index % 3) * 75}ms`,
                   '--md-delay': `${(index % 2) * 75}ms`,
                   '--sm-delay': `${(index % 2) * 75}ms`,
@@ -68,7 +69,6 @@ const Blog = ({ blogPage, blogPosts }) => {
 };
 export default Blog;
 
-// Export Props
 export const getStaticProps = () => {
   const blogPage = getSinglePage('./src/content/blog/_index.md');
   const blogPosts = getDirectoryPages('./src/content/blog');
