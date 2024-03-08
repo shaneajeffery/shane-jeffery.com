@@ -103,38 +103,8 @@ const About = ({ aboutPage }) => {
                 <div className="order-2 mb-0 mt-10 lg:order-1 lg:mb-10 lg:mt-0">
                   <p className="mb-4 text-2xl leading-snug">{about.title}</p>
                   <div className="text-black/75">
-                    <Markdown content={about.description} inline={true} />
+                    <Markdown content={about.description} inline={false} />
                   </div>
-                </div>
-
-                <div className="order-1 lg:order-2">
-                  <button
-                    className="button button-sm button-dark"
-                    onClick={() => handleClick()}
-                  >
-                    <span>
-                      <svg
-                        style={{
-                          transform: `rotate(${rotate}deg)`,
-                        }}
-                        className="mr-2 inline align-bottom transition-transform duration-1000 ease-out"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M18.3332 10.0003C18.3332 14.6027 14.6022 18.3337 9.99984 18.3337C5.39746 18.3337 2.49984 13.7503 2.49984 13.7503M1.6665 10.0003C1.6665 5.39795 5.37021 1.66699 9.99984 1.66699C15.5554 1.66699 18.3332 6.25033 18.3332 6.25033M18.3332 6.25033V3.33366M18.3332 6.25033H15.4165M2.49984 13.7503H5.4165M2.49984 13.7503V16.667"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      More Photos
-                    </span>
-                  </button>
                 </div>
               </div>
             </div>
@@ -142,7 +112,7 @@ const About = ({ aboutPage }) => {
         </div>
       </section>
 
-      {services.enable && (
+      {/* {services.enable && (
         <section className="py-28">
           <div className="container">
             <div className="row mb-16 items-end">
@@ -208,16 +178,13 @@ const About = ({ aboutPage }) => {
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
-      <section
-        className="rounded-b-2xl bg-white py-28 text-dark"
-        data-aos="fade-in"
-      >
+      <section className="rounded-b-2xl  py-28 " data-aos="fade-in">
         <div className="container">
           <div className="row mb-16 items-end">
             <div className="col-12 text-center">
-              <span className="mb-4 block font-secondary text-2xl leading-none text-black/75">
+              <span className="mb-4 block font-secondary text-2xl leading-none text-white/75">
                 {whatClientsSay.subtitle}
               </span>
               <h2 className="-mt-[6px] font-secondary text-4xl font-medium md:text-5xl">
@@ -246,11 +213,11 @@ const About = ({ aboutPage }) => {
                   {whatClientsSay.reviewsItems.map((item, index) => (
                     <SwiperSlide key={index}>
                       <div className="text-center">
-                        <div className="mb-4 rounded-lg bg-light/10 px-5 py-8 text-lg md:px-10">
-                          {item.review}
+                        <div className="mb-4 rounded-lg bg-light/10 px-5 py-8 text-left text-lg md:px-10">
+                          <Markdown content={item.review} inline={false} />
                         </div>
                         <p className="mb-1 text-2xl font-medium">{item.name}</p>
-                        <p className="text-black/75">{item.info}</p>
+                        <p className="text-white/75">{item.info}</p>
                       </div>
                     </SwiperSlide>
                   ))}
@@ -261,7 +228,7 @@ const About = ({ aboutPage }) => {
                   title="Slide Prev"
                 >
                   <Image
-                    className="inline-block rotate-180 invert"
+                    className="inline-block rotate-180 "
                     src="/images/arrow-right.svg"
                     alt="arrow-right"
                     height={31}
@@ -273,11 +240,12 @@ const About = ({ aboutPage }) => {
                   title="Slide Next"
                 >
                   <Image
-                    className="inline-block invert"
+                    className="inline-block "
                     src="/images/arrow-right.svg"
                     alt="arrow-right"
                     height={31}
                     width={39}
+                    color="white"
                   />
                 </button>
               </div>

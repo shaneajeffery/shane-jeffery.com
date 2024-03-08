@@ -1,34 +1,30 @@
 {
-    "mainMenu": [
-        {
-            "name": "Home",
-            "link": "/"
-        },
-        {
-            "name": "About",
-            "link": "/about"
-        },
-        {
-            "name": "Work Experience",
-            "link": "/work-experience"
-        },
-        {
-            "name": "Blog",
-            "link": "/blog"
-        },
-        {
-            "name": "Contact",
-            "link": "/contact"
-        }
-    ],
-    "footerMenu": [
-        {
-            "name": "Imprint",
-            "link": "!#"
-        },
-        {
-            "name": "Privacy policy",
-            "link": "/privacy"
-        }
-    ]
+  "mainMenu": [
+    {
+      "name": "Home",
+      "link": "/"
+    },
+    {
+      "name": "About",
+      "link": "/about"
+    },
+    {
+      "name": "Work Experience",
+      "link": "/work-experience"
+    },
+    {
+      "name": "Blog",
+      "link": "/blog"
+    }
+  ],
+  "footerMenu": [
+    {
+      "name": "Imprint",
+      "link": "!#"
+    },
+    {
+      "name": "Privacy policy",
+      "link": "/privacy"
+    }
+  ]
 }
