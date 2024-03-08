@@ -1,26 +1,26 @@
-import menu from '@/config/menus.json';
-import siteConfig from '@/config/site.config.json';
-import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useRef, useState } from 'react';
 
+import menu from '@/config/menus.json';
+import siteConfig from '@/config/site.config.json';
 import style from '@/styles/modules/Header.module.scss';
 
 const Header = () => {
   const router = useRouter();
   const pathname = router.pathname;
 
-  const { logo, logoText, socialLinks } = siteConfig;
+  const { socialLinks } = siteConfig;
   const { mainMenu } = menu;
   const mainMenuLength = mainMenu.length;
 
   const [indicatorPosition, setIndicatorPosition] = useState(null);
-  const navRef = useRef(null);
-  const activeLinkRef = useRef(null);
+  const navRef = useRef<any>(null);
+  const activeLinkRef = useRef<any>(null);
 
   useEffect(() => {
     const activeLink = navRef.current.querySelector('.active');
+
     if (activeLink) {
       activeLinkRef.current = activeLink;
       setIndicatorPosition({
@@ -124,18 +124,7 @@ const Header = () => {
         <div className="relative flex items-center justify-between py-6">
           <div
             className={`w-1/4 transition-all duration-300 ${isScrolled ? 'lg:-translate-x-8 lg:opacity-0' : ''}`}
-          >
-            {/* <Link href="/" className="inline-block align-middle">
-                            <Image
-                                src={logo}
-                                alt={logoText}
-                                width={80}
-                                height={29}
-                                quality={100}
-                                priority
-                            />
-                        </Link> */}
-          </div>
+          ></div>
           <nav
             ref={navRef}
             className={`${style.navbar} ${mobileNavClose ? '!h-12 w-12 lg:!h-auto lg:w-auto' : 'w-56 lg:w-auto'} ${!mobileNavClose ? style.navbarOpen : ''}`}

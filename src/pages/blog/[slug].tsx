@@ -1,6 +1,6 @@
-import Layout from '@/components/Layout';
-import Markdown from '@/components/ReactMarkdown';
-import SharePost from '@/components/SharePost';
+import Layout from '@/components/layout';
+import Markdown from '@/components/react-markdown';
+import SharePost from '@/components/share-post';
 import siteConfig from '@/config/site.config.json';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { formatDate } from '@/libs/utils/formatDate';
@@ -13,10 +13,7 @@ const BlogPage = ({
   nextPost,
   currentPost: { slug, frontMatter, content },
 }) => {
-  // Current post frontMatter
   const { title, date, image, description, category } = frontMatter;
-
-  // Get Page Url
   const pageUrl = `${siteConfig.baseURL.replace(/\/$|$/, '/')}blog/${slug}`;
 
   return (

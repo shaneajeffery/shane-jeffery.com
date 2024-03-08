@@ -1,4 +1,9 @@
-const SharePost = ({ title, pageUrl }) => {
+interface Props {
+  title: string;
+  pageUrl: string;
+}
+
+const SharePost = ({ title, pageUrl }: Props) => {
   return (
     <ul className="mt-10 flex flex-wrap items-center justify-center space-x-5 border-b border-t border-light/10 pt-3 text-white sm:mt-2 sm:inline-block sm:space-x-0 sm:border-none sm:pt-0 [&>li:hover]:bg-light/20 [&>li]:mb-3 [&>li]:rounded-lg [&>li]:bg-light/10 [&>li]:leading-none">
       <li className="transition-all duration-300">

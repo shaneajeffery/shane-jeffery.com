@@ -1,17 +1,24 @@
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import { ReactNode } from 'react';
+import Footer from './footer';
+import Header from './header';
 import siteConfig from '@/config/site.config.json';
 import Head from 'next/head';
+
+interface Props {
+  metaTitle: string;
+  metaDescription: string;
+  metaKeyword: string;
+  className: string;
+  children: ReactNode;
+}
 
 const Layout = ({
   metaTitle,
   metaDescription,
-  metaAuthor,
   metaKeyword,
-  ogImage,
   className,
   children,
-}) => {
+}: Props) => {
   return (
     <>
       <Head>
@@ -24,18 +31,7 @@ const Layout = ({
 
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta name="keyword" content={metaKeyword} />
-        <meta name="author" content={metaAuthor} />
         <meta name="description" content={metaDescription} />
-
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta name="twitter:title" content={metaTitle} />
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:description" content={metaDescription} />
 
         <link
           rel="shortcut icon"
@@ -56,12 +52,5 @@ const Layout = ({
     </>
   );
 };
-export default Layout;
 
-Layout.defaultProps = {
-  metaTitle: siteConfig.metaData.title,
-  metaDescription: siteConfig.metaData.description,
-  metaAuthor: siteConfig.metaData.author,
-  metaKeyword: siteConfig.metaData.keyword,
-  ogImage: siteConfig.metaData.ogImage,
-};
+export default Layout;

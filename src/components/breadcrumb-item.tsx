@@ -1,5 +1,5 @@
-import { capitalizeText } from '@/utils/capitalizeText';
 import Link from 'next/link';
+import { capitalizeText } from '@/utils/capitalizeText';
 
 const BreadcrumbItem = ({ children, href, isCurrent, ...props }) => {
   return (

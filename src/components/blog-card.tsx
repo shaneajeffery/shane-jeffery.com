@@ -1,6 +1,6 @@
-import { formatDate } from '@/libs/utils/formatDate';
 import Image from 'next/image';
 import Link from 'next/link';
+import { formatDate } from '@/libs/utils/formatDate';
 
 const BlogCard = ({ frontMatter, slug }) => {
   const { title, date, image, category } = frontMatter;

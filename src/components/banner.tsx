@@ -1,26 +1,21 @@
-import config from '@/config/site.config.json';
-
-import Markdown from '@/components/ReactMarkdown';
-import style from '@/styles/modules/Banner.module.scss';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import Markdown from '@/components/react-markdown';
+
+import config from '@/config/site.config.json';
+import style from '@/styles/modules/Banner.module.scss';
 
 const Banner = ({ banner }) => {
   const bannerBgText = config.settings.bannerBgText;
   const { first_name, last_name, bg_text, description, image } = banner;
 
-  const [isLoading, setLoading] = useState(true);
-  const textEl = useRef();
-
-  useEffect(() => {
-    setLoading(false);
-  }, []);
+  const textEl = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleBannerScroll = () => {
       if (textEl.current !== null) {
         const scrollValue = window.scrollY;
-        textEl.current.style.opacity = (1000 - scrollValue) / 1000;
+        textEl.current.style.opacity = ((1000 - scrollValue) / 1000).toString();
         textEl.current.style.transform = `translateX(-${scrollValue}px)`;
       }
     };

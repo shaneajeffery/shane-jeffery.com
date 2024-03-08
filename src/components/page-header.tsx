@@ -1,12 +1,24 @@
-import Breadcrumb from '@/components/Breadcrumb';
-import BreadcrumbItem from '@/components/BreadcrumbItem';
-import { capitalizeText } from '@/utils/capitalizeText';
-import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
-const PageHeader = ({ title, subtitle }) => {
+import BreadcrumbItem from '@/components/breadcrumb-item';
+import Breadcrumb from '@/components/breadcrumb';
+import { capitalizeText } from '@/utils/capitalizeText';
+
+interface PageHeaderBreadcrumb {
+  href: string;
+  label: string;
+  isCurrent: boolean;
+}
+
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const PageHeader = ({ title, subtitle }: Props) => {
   const router = useRouter();
-  const [breadcrumbs, setBreadcrumbs] = useState();
+  const [breadcrumbs, setBreadcrumbs] = useState<PageHeaderBreadcrumb[]>([]);
 
   useEffect(() => {
     const pathWithoutQuery = router.asPath.split('?')[0];
@@ -39,9 +51,19 @@ const PageHeader = ({ title, subtitle }) => {
 
               <Breadcrumb>
                 <li>
-                  {/* prettier-ignore */}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round" className="mr-3"
-                    style={{ transform: "rotateY(180deg)" }}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="mr-3"
+                    style={{ transform: 'rotateY(180deg)' }}
+                  >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2"></path>
                     <path d="M19 12h2l-9 -9l-9 9h2v7a2 2 0 0 0 2 2h5.5"></path>

@@ -1,6 +1,6 @@
-import Layout from '@/components/Layout';
-import PageHeader from '@/components/PageHeader';
-import Markdown from '@/components/ReactMarkdown';
+import Layout from '@/components/layout';
+import PageHeader from '@/components/page-header';
+import Markdown from '@/components/react-markdown';
 import { getSinglePage } from '@/libs/getSinglePage';
 
 const Privacy = ({ privacyPage }) => {

@@ -1,6 +1,6 @@
-import BlogCard from '@/blocks/BlogCard';
-import Layout from '@/components/Layout';
-import PageHeader from '@/components/PageHeader';
+import BlogCard from '@/components/blog-card';
+import Layout from '@/components/layout';
+import PageHeader from '@/components/page-header';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { getSinglePage } from '@/libs/getSinglePage';
 import { useState } from 'react';

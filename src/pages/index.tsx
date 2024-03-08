@@ -1,12 +1,12 @@
-import Layout from '@/components/Layout';
+import Layout from '@/components/layout';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { getSinglePage } from '@/libs/getSinglePage';
 import Link from 'next/link';
 
-import Banner from '@/blocks/Banner';
-import BlogCard from '@/blocks/BlogCard';
-import ProjectCard from '@/blocks/ProjectCard';
-import WorkProcess from '@/blocks/WorkProcess';
+import Banner from '@/components/banner';
+import BlogCard from '@/components/blog-card';
+import ProjectCard from '@/components/work-experience-card';
+
 import Image from 'next/image';
 
 const Home = ({
@@ -41,21 +41,18 @@ const Home = ({
             {workExperiences.map((we, i) => (
               <div
                 key={we.slug}
-                className={`${i % 5 >= 3 ? 'sm:col-6' : 'sm:col-6 lg:col-4'} ${i === 4 ? 'hidden lg:block' : ''}`}
+                className={`${'sm:col-6 lg:col-4'} ${i === 4 ? 'hidden lg:block' : ''}`}
               >
                 <ProjectCard
                   index={i}
                   slug={we.slug}
                   frontMatter={we.frontMatter}
-                  twoColumns={i % 5 >= 3}
                 />
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      <WorkProcess workProcess={workProcess} />
 
       <section className="rounded-b-2xl bg-white py-28 text-dark">
         <div className="container">

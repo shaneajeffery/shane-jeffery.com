@@ -1,8 +1,8 @@
-import Layout from '@/components/Layout';
-import Markdown from '@/components/ReactMarkdown';
+import Layout from '@/components/layout';
+import Markdown from '@/components/react-markdown';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 
-import ProjectCard from '@/blocks/ProjectCard';
+import ProjectCard from '@/components/work-experience-card';
 import Image from 'next/image';
 
 const WorkExperiencePage = ({

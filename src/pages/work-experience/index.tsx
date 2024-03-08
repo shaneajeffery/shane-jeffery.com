@@ -1,6 +1,6 @@
-import ProjectCard from '@/blocks/ProjectCard';
-import Layout from '@/components/Layout';
-import PageHeader from '@/components/PageHeader';
+import ProjectCard from '@/components/work-experience-card';
+import Layout from '@/components/layout';
+import PageHeader from '@/components/page-header';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { getSinglePage } from '@/libs/getSinglePage';
 import { useState } from 'react';

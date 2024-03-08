@@ -1,4 +1,3 @@
-import DeviceSizeIndicator from '@/components/DeviceSizeIndicator';
 import config from '@/config/site.config.json';
 
 import { Outfit } from 'next/font/google';
@@ -35,7 +34,6 @@ const AverApp = ({ Component, pageProps }) => {
     <section
       className={`${outfit.variable} ${melodrama.variable} font-primary`}
     >
-      <DeviceSizeIndicator enable={deviceIndicator} />
       <Component {...pageProps} />
     </section>
   );

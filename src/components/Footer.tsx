@@ -1,10 +1,8 @@
-import menu from '@/config/menus.json';
-import siteConfig from '@/config/site.config.json';
-import Image from 'next/image';
-import Link from 'next/link';
-
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+
+import menu from '@/config/menus.json';
+import siteConfig from '@/config/site.config.json';
 
 const Footer = () => {
   const { copyright, socialLinks } = siteConfig;

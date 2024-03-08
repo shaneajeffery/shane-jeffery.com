@@ -1,6 +1,10 @@
-import { Children, Fragment } from 'react';
+import { Children, Fragment, ReactElement, ReactNode } from 'react';
 
-const Breadcrumb = ({ children }) => {
+interface Props {
+  children: ReactNode;
+}
+
+const Breadcrumb = ({ children }: Props) => {
   const childrenArray = Children.toArray(children);
 
   const childrenWtihSeperator = childrenArray.map((child, index) => {
