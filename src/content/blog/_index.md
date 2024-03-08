@@ -1,4 +1,4 @@
 ---
-title: 'My astute observations'
+title: 'My Astute Observations'
 subtitle: 'Blog'
 ---

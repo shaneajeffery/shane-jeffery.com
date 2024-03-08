@@ -248,7 +248,11 @@ const Header = () => {
                                     key={key}
                                     className="transition-op inline-block duration-300 hover:opacity-75"
                                 >
-                                    <a href={item.link} className="link">
+                                    <a
+                                        href={item.link}
+                                        className="link"
+                                        target="_blank"
+                                    >
                                         {item.name}
                                     </a>
                                 </li>

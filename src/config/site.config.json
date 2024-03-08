@@ -1,43 +1,26 @@
 {
     "metaData": {
-        "title": "Aver - Personal Portfolio React NextJS Template",
-        "description": "Personal Portfolio React NextJS Template",
-        "author": "Platol",
-        "keyword": "personal, portfolio, blog, nextjs blog, react, nextjs, next.js, next js, minimal",
-        "ogImage": "/images/ogimage.jpg"
+        "title": "Shane Jeffery",
+        "description": "Full Stack Software Engineer and Technical Lead specializing in Typescript, React, Redux, Vue, Vuex, Node, Express, Graphql, Java, Spring Boot, Docker, and Kubernetes.",
+        "keyword": "full stack, software engineer, full stack software engineer, technical lead, typescript, react, redux, vue, vuex, node, express, graphql, java, spring boot, docker, kubernetes"
     },
     "baseURL": "https://www.shane-jeffery.com",
-    "logo": "/images/logo.svg",
-    "logoText": "Aver",
     "favicon": "/images/favicon.png",
-
     "settings": {
-        "bannerBgText": true,
+        "bannerBgText": false,
         "deviceIndicator": false
     },
-
-    "copyright": "© 2023 Aver. All rights reserved.",
-
+    "copyright": "© 2024 Shane Jeffery. All rights reserved.",
     "socialLinks": [
         {
-            "name": "FB",
-            "fullName": "Facebook",
-            "link": "https://facebook.com/"
-        },
-        {
-            "name": "TW",
-            "fullName": "Twitter",
-            "link": "https://twitter.com/"
-        },
-        {
-            "name": "IN",
+            "name": "LINKEDIN",
             "fullName": "Linkedin",
-            "link": "https://linkedin.com/"
+            "link": "https://www.linkedin.com/in/shaneajeffery/"
         },
         {
             "name": "GITHUB",
             "fullName": "Github",
-            "link": "https://github.com/"
+            "link": "https://www.github.com/shaneajeffery"
         }
     ]
 }
