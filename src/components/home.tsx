@@ -1,13 +1,6 @@
-import userImage from '../assets/images/about/avatar.jpg'
-import cvFile from '../assets/images/cv.webp'
-import {
-    FaFacebookF,
-    FaTwitter,
-    FaDribbble,
-    FaLinkedinIn,
-    FaDownload,
-    FaGithub,
-} from 'react-icons/fa'
+import userImage from '../assets/images/about/avatar.jpg';
+import cvFile from '../assets/images/cv.webp';
+import { FaLinkedinIn, FaDownload, FaGithub } from 'react-icons/fa';
 
 const HomePage = () => {
     return (
@@ -61,7 +54,7 @@ const HomePage = () => {
                 </a>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default HomePage
+export default HomePage;
