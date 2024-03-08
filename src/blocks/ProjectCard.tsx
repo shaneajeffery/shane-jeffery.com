@@ -16,10 +16,10 @@ const Projects = ({ index, slug, frontMatter, twoColumns }) => {
       <Image
         src={image}
         alt={title}
-        width={twoColumns ? 620 : 520}
-        height={twoColumns ? 420 : 550}
+        width={twoColumns ? 200 : 200}
+        height={twoColumns ? 200 : 200}
         className={`h-full w-full scale-150 bg-light/20 object-cover duration-700 group-hover:!scale-125 group-[.aos-animate]:scale-100 ${twoColumns ? 'has-twoColumns' : ''}`}
-        style={twoColumns ? { height: '376px' } : ''}
+        style={twoColumns ? { height: '200px' } : ''}
       />
       <div className="absolute inset-0 z-20 flex flex-col justify-center p-8">
         <span className="bg-overlay pointer-events-none absolute bottom-0 left-0 -z-10 h-full w-full opacity-0 duration-300 group-hover:opacity-100"></span>

@@ -41,21 +41,6 @@ const WorkExperience = ({ workExperiencePage, allWorkExperiences }) => {
                 <ProjectCard slug={we.slug} frontMatter={we.frontMatter} />
               </div>
             ))}
-
-            <div className="mt-16 text-center">
-              {allWorkExperiences.length > workExperiencesToShow && loadMore ? (
-                <button
-                  className="button button-dark"
-                  onClick={() => handleLoadMore()}
-                >
-                  <span>Load More</span>
-                </button>
-              ) : (
-                <p className="text-black/25">
-                  No more work experiences to load.
-                </p>
-              )}
-            </div>
           </div>
         </div>
       </section>

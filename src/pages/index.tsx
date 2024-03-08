@@ -52,12 +52,6 @@ const Home = ({
               </div>
             ))}
           </div>
-
-          <div className="mt-16 text-center">
-            <Link className="button" href="/project">
-              <span>All Works</span>
-            </Link>
-          </div>
         </div>
       </section>
 

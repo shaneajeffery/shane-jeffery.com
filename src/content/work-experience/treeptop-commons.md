@@ -1,8 +1,8 @@
 ---
 date: '02-05-2023'
-title: 'Shuvashini'
+title: 'Treetop Commons'
 description: 'Color Splash'
-image: '/images/project/04.jpg'
+image: '/images/work-experience/treetop.jpg'
 color: '#307B93'
 category: 'Art'
 
@@ -26,8 +26,8 @@ Throughout the process, Aver's collaborative approach and open communication ens
 
 <div class="image columns-1 sm:columns-2 gap-8">
 
-![Shuvashini 01.](/images/project/04-01.jpg)
-![Shuvashini 01.](/images/project/04-02.jpg)
+<!-- ![Shuvashini 01.](/images/project/04-01.jpg)
+![Shuvashini 01.](/images/project/04-02.jpg) -->
 
 </div>
 
