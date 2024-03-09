@@ -42,7 +42,7 @@ const Home = ({
 
           <div className="row gy-4 md:gx-4">
             {/* @ts-ignore */}
-            {workExperiences.map((we, i) => (
+            {workExperiences.map((we) => (
               <div key={we.slug} className={`${'sm:col-2'}`}>
                 <WorkExperienceCard
                   slug={we.slug}
