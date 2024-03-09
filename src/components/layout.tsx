@@ -6,19 +6,11 @@ import Head from 'next/head';
 
 interface Props {
   metaTitle?: string;
-  metaDescription?: string;
-  metaKeyword?: string;
   className?: string;
   children?: ReactNode;
 }
 
-const Layout = ({
-  metaTitle,
-  metaDescription,
-  metaKeyword,
-  className,
-  children,
-}: Props) => {
+const Layout = ({ metaTitle, className, children }: Props) => {
   return (
     <>
       <Head>
@@ -27,17 +19,36 @@ const Layout = ({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
-        <title>{metaTitle}</title>
+        <title>{`${metaTitle ? `${metaTitle} | ${siteConfig.metaData.title} ` : siteConfig.metaData.title}`}</title>
 
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="keyword" content={metaKeyword} />
-        <meta name="description" content={metaDescription} />
+        <meta name="keyword" content={siteConfig.metaData.keyword} />
+        <meta name="description" content={siteConfig.metaData.description} />
 
         <link
           rel="shortcut icon"
           href={siteConfig.favicon}
           type="image/x-icon"
         />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
       <Header />

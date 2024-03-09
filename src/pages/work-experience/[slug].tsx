@@ -11,10 +11,10 @@ const WorkExperiencePage = ({
   // @ts-ignore
   currentWorkExperience: { frontMatter, content },
 }) => {
-  const { title, image, description, category, projectInfo } = frontMatter;
+  const { title, image, category, projectInfo } = frontMatter;
 
   return (
-    <Layout metaTitle={title} metaDescription={description}>
+    <Layout metaTitle={title}>
       <section className="pb-28 pt-24">
         <div className="container">
           <div className="banner row justify-center">

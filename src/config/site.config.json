@@ -5,7 +5,7 @@
     "keyword": "full stack, software engineer, full stack software engineer, technical lead, typescript, react, redux, vue, vuex, node, express, graphql, python, fastapi, django, flask, sqlalchemy, sqlmodel, docker, kubernetes"
   },
   "baseURL": "https://www.shane-jeffery.com",
-  "favicon": "/images/favicon.png",
+  "favicon": "/images/favicon.ico",
   "settings": {
     "bannerBgText": false
   },

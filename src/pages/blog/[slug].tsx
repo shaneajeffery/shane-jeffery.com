@@ -20,7 +20,7 @@ const BlogPage = ({
   const pageUrl = `${siteConfig.baseURL.replace(/\/$|$/, '/')}blog/${slug}`;
 
   return (
-    <Layout metaTitle={title} metaDescription={description}>
+    <Layout metaTitle={title}>
       <section className="pb-28 pt-24">
         <div className="container">
           <div className="row justify-center">
