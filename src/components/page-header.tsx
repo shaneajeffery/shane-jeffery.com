@@ -96,4 +96,5 @@ const PageHeader = ({ title, subtitle }: Props) => {
     </section>
   );
 };
+
 export default PageHeader;
