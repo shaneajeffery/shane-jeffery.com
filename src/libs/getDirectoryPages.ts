@@ -3,25 +3,26 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
+// @ts-ignore
 export const getDirectoryPages = (directory, length) => {
-    const dirFiles = fs.readdirSync(path.join(directory));
-    const pages = dirFiles.filter((file) => file.match(/^(?!_)/));
+  const dirFiles = fs.readdirSync(path.join(directory));
+  const pages = dirFiles.filter((file) => file.match(/^(?!_)/));
 
-    const returnDirFiles = pages.map((filename) => {
-        const slug = filename.replace('.md', '');
-        const dirFileContents = fs.readFileSync(
-            path.join(directory, filename),
-            'utf8'
-        );
+  const returnDirFiles = pages.map((filename) => {
+    const slug = filename.replace('.md', '');
+    const dirFileContents = fs.readFileSync(
+      path.join(directory, filename),
+      'utf8'
+    );
 
-        const { data: frontMatter, content } = matter(dirFileContents);
+    const { data: frontMatter, content } = matter(dirFileContents);
 
-        return {
-            slug,
-            frontMatter,
-            content,
-        };
-    });
+    return {
+      slug,
+      frontMatter,
+      content,
+    };
+  });
 
-    return returnDirFiles.sort(sortByDate).slice(0, length);
+  return returnDirFiles.sort(sortByDate).slice(0, length);
 };

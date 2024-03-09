@@ -33,6 +33,7 @@ const Blog = ({ blogPage, blogPosts }) => {
       <section className="rounded-b-2xl bg-white py-28 text-dark">
         <div className="container">
           <div className="row gy-5 md:gx-4">
+            {/* @ts-ignore */}
             {posts.map((item, index) => (
               <div
                 key={item.slug}
