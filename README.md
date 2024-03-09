@@ -1,4 +1,6 @@
-# Shane Jeffery Personal Website ![Vercel Deploy](https://therealsujitk-vercel-badge.vercel.app/?app=shane-jeffery-com)
+ ![Vercel Deploy](https://therealsujitk-vercel-badge.vercel.app/?app=shane-jeffery-com) 
+
+# Shane Jeffery Personal Website
 
 ![NextJS](https://img.shields.io/badge/nextjs-%23000000.svg?style=for-the-badge&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Tailwindcss](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
