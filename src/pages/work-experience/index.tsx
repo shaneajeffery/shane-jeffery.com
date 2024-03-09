@@ -19,7 +19,7 @@ const WorkExperience = ({ workExperiencePage, allWorkExperiences }) => {
             {allWorkExperiences.map((we, i) => (
               <div
                 key={we.slug}
-                className={`${'sm:col-6 lg:col-4'} ${i === 4 ? 'hidden lg:block' : ''}`}
+                className={`${'sm:col-3 lg:col-2'} ${i === 4 ? 'hidden lg:block' : ''}`}
               >
                 <WorkExperienceCard
                   slug={we.slug}

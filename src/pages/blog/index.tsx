@@ -37,7 +37,7 @@ const Blog = ({ blogPage, blogPosts }) => {
             {posts.map((item, index) => (
               <div
                 key={item.slug}
-                className="init-delay sm:col-6 lg:col-4"
+                className="init-delay sm:col-3"
                 data-aos="fade-up-sm"
                 data-aos-duration="500"
                 style={{

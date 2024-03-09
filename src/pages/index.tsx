@@ -43,10 +43,7 @@ const Home = ({
           <div className="row gy-4 md:gx-4">
             {/* @ts-ignore */}
             {workExperiences.map((we, i) => (
-              <div
-                key={we.slug}
-                className={`${'sm:col-6 lg:col-4'} ${i === 4 ? 'hidden lg:block' : ''}`}
-              >
+              <div key={we.slug} className={`${'sm:col-2'}`}>
                 <WorkExperienceCard
                   slug={we.slug}
                   frontMatter={we.frontMatter}
@@ -78,7 +75,7 @@ const Home = ({
             {blogPosts.map((item, index) => (
               <div
                 key={item.slug}
-                className="init-delay sm:col-6 lg:col-4"
+                className="init-delay sm:col-3"
                 data-aos="fade-up-sm"
                 data-aos-duration="500"
                 style={{

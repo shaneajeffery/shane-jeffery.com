@@ -1,7 +1,7 @@
 ---
-title: 'The RIF (reduction-in-force)'
+title: 'Test Blog'
 description: ''
-image: '/images/blog/01.png'
-date: '2023-08-03'
+image: ''
+date: '2024-03-09'
 category: 'career'
 ---
