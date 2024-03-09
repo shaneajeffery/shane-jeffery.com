@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import WorkExperienceCard from '@/components/work-experience-card';
 import Layout from '@/components/layout';
 import PageHeader from '@/components/page-header';
@@ -9,11 +7,6 @@ import { getSinglePage } from '@/libs/getSinglePage';
 const WorkExperience = ({ workExperiencePage, allWorkExperiences }) => {
   const { title, subtitle } = workExperiencePage.frontMatter;
 
-  const workExperiencesToShow = 6;
-  const [workExperiences, setWorkExperiences] = useState(
-    allWorkExperiences.slice(0, workExperiencesToShow)
-  );
-
   return (
     <Layout metaTitle={title}>
       <PageHeader title={title} subtitle={subtitle} />
@@ -21,11 +14,15 @@ const WorkExperience = ({ workExperiencePage, allWorkExperiences }) => {
       <section className="rounded-b-2xl bg-white py-28 text-dark">
         <div className="container">
           <div className="row gy-4 md:gx-4">
-            {workExperiences.map((we) => (
-              <div key={we.slug} className="sm:col-6 lg:col-4">
+            {allWorkExperiences.map((we, i) => (
+              <div
+                key={we.slug}
+                className={`${'sm:col-6 lg:col-4'} ${i === 4 ? 'hidden lg:block' : ''}`}
+              >
                 <WorkExperienceCard
                   slug={we.slug}
                   frontMatter={we.frontMatter}
+                  onListingPage={true}
                 />
               </div>
             ))}

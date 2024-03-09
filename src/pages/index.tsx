@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import Banner from '@/components/banner';
 import BlogCard from '@/components/blog-card';
-import ProjectCard from '@/components/work-experience-card';
+import WorkExperienceCard from '@/components/work-experience-card';
 
 const Home = ({
   homepage,
@@ -41,10 +41,10 @@ const Home = ({
                 key={we.slug}
                 className={`${'sm:col-6 lg:col-4'} ${i === 4 ? 'hidden lg:block' : ''}`}
               >
-                <ProjectCard
-                  index={i}
+                <WorkExperienceCard
                   slug={we.slug}
                   frontMatter={we.frontMatter}
+                  onListingPage={true}
                 />
               </div>
             ))}

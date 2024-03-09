@@ -21,14 +21,13 @@ const WorkExperiencePage = ({
                 {category}
               </span>
 
-              <h1 className="mb-4 text-4xl !leading-tight md:text-5xl">
+              <h1 className="mb-0 text-4xl !leading-tight md:text-5xl">
                 {title}
               </h1>
-              <p>{description}</p>
 
-              <ul className="row mt-4 text-white">
+              <ul className="row  text-white">
                 {projectInfo.map((item, index) => (
-                  <li key={index} className="col-6 mt-8">
+                  <li key={index} className="col-12 mt-8">
                     <p className="mb-2 text-xs uppercase tracking-wider text-white/50">
                       {item.title}
                     </p>
@@ -45,11 +44,11 @@ const WorkExperiencePage = ({
               data-aos-delay="100"
             >
               <Image
-                className="aspect-square w-full rounded-lg bg-light/20 object-cover object-center md:w-[500px]"
+                className="aspect-square w-full rounded-lg bg-light/20 object-cover object-center md:w-[200px]"
                 src={image}
                 alt={title}
-                width={`500`}
-                height={`500`}
+                width={`200`}
+                height={`200`}
               />
             </div>
 
@@ -79,7 +78,6 @@ const WorkExperiencePage = ({
             <div className="lg:col-6">
               {nextWorkExperience && (
                 <WorkExperienceCard
-                  index={0}
                   slug={nextWorkExperience.slug}
                   frontMatter={nextWorkExperience.frontMatter}
                 />
