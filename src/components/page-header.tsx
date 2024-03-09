@@ -71,19 +71,14 @@ const PageHeader = ({ title, subtitle }: Props) => {
                     <path d="M19 16l3 3l-3 3"></path>
                   </svg>
                 </li>
-                <BreadcrumbItem isCurrent={router.pathname === '/'} href="/">
-                  Home
-                </BreadcrumbItem>
+                <BreadcrumbItem href="/">Home</BreadcrumbItem>
                 {breadcrumbs &&
                   breadcrumbs.map((breadcrumb) => (
                     <React.Fragment key={breadcrumb.href}>
                       <li>
                         <span className="px-4">•</span>
                       </li>
-                      <BreadcrumbItem
-                        href={breadcrumb.href}
-                        isCurrent={breadcrumb.isCurrent}
-                      >
+                      <BreadcrumbItem href={breadcrumb.href}>
                         {breadcrumb.label}
                       </BreadcrumbItem>
                     </React.Fragment>

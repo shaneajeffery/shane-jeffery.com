@@ -5,10 +5,9 @@ import { ReactElement } from 'react';
 interface Props {
   children: ReactElement | string;
   href: string;
-  isCurrent: boolean;
 }
 
-const BreadcrumbItem = ({ children, href, isCurrent, ...props }: Props) => {
+const BreadcrumbItem = ({ children, href, ...props }: Props) => {
   return (
     <li {...props}>
       <Link className="link" href={href} passHref>

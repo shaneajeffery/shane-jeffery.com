@@ -3,7 +3,7 @@ import PageHeader from '@/components/page-header';
 import Markdown from '@/components/react-markdown';
 import { getSinglePage } from '@/libs/getSinglePage';
 import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { A11y, Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
