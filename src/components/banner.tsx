@@ -45,9 +45,6 @@ const Banner = ({ banner }) => {
                   alt={first_name + last_name}
                   height={150}
                   width={150}
-                  data-aos="slide-up"
-                  data-aos-duration="500"
-                  data-aos-delay="150"
                 />
               </div>
             </div>
@@ -66,9 +63,6 @@ const Banner = ({ banner }) => {
                     alt={first_name + last_name}
                     height={150}
                     width={150}
-                    data-aos="slide-up"
-                    data-aos-duration="500"
-                    data-aos-delay="150"
                   />
                 </div>
               </div>
