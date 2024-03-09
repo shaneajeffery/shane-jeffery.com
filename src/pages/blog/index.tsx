@@ -5,6 +5,7 @@ import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { getSinglePage } from '@/libs/getSinglePage';
 import { useState } from 'react';
 
+// @ts-ignore
 const Blog = ({ blogPage, blogPosts }) => {
   const totalPosts = blogPosts.length;
   let { title, subtitle } = blogPage.frontMatter;
@@ -71,6 +72,7 @@ export default Blog;
 
 export const getStaticProps = () => {
   const blogPage = getSinglePage('./src/content/blog/_index.md');
+  // @ts-ignore
   const blogPosts = getDirectoryPages('./src/content/blog');
 
   return {

@@ -4,6 +4,7 @@ import PageHeader from '@/components/page-header';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { getSinglePage } from '@/libs/getSinglePage';
 
+// @ts-ignore
 const WorkExperience = ({ workExperiencePage, allWorkExperiences }) => {
   const { title, subtitle } = workExperiencePage.frontMatter;
 
@@ -14,6 +15,7 @@ const WorkExperience = ({ workExperiencePage, allWorkExperiences }) => {
       <section className="rounded-b-2xl bg-white py-28 text-dark">
         <div className="container">
           <div className="row gy-4 md:gx-4">
+            {/* @ts-ignore */}
             {allWorkExperiences.map((we, i) => (
               <div
                 key={we.slug}
@@ -39,6 +41,8 @@ export const getStaticProps = () => {
   const workExperiencePage = getSinglePage(
     './src/content/work-experience/_index.md'
   );
+
+  // @ts-ignore
   const allWorkExperiences = getDirectoryPages('./src/content/work-experience');
 
   return {

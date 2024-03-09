@@ -10,15 +10,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 
+// @ts-ignore
 const About = ({ aboutPage }) => {
-  const { title, subtitle, about, featuredBy, services, whatClientsSay } =
-    aboutPage.frontMatter;
+  const { title, subtitle, about, whatClientsSay } = aboutPage.frontMatter;
 
-  // Random Numbers
-  const [randomNumbers, setRandomNumbers] = useState([]);
+  const [randomNumbers, setRandomNumbers] = useState<any>([]);
+
   useEffect(() => {
     const generateUniqueRandomNumbers = () => {
-      const numbers = [];
+      const numbers: any[] = [];
       const min = -6;
       const max = 6;
       while (numbers.length < about.images.length) {
@@ -37,10 +37,10 @@ const About = ({ aboutPage }) => {
   const imageIndexRef = useRef(0);
 
   const swapImages = () => {
+    // @ts-ignore
     const { children } = imageRef.current;
     const lastIndex = children.length - 1;
     const previousIndex = imageIndexRef.current;
-    console.log(lastIndex, previousIndex);
 
     const nextIndex = previousIndex === 0 ? lastIndex : previousIndex - 1;
 
@@ -74,6 +74,7 @@ const About = ({ aboutPage }) => {
                 onClick={() => handleClick()}
                 className="relative z-10 mx-8 cursor-pointer transition-transform duration-300 ease-out hover:scale-105"
               >
+                {/* @ts-ignore */}
                 {about.images.map((item, index) => (
                   <div
                     key={index}
@@ -138,6 +139,7 @@ const About = ({ aboutPage }) => {
                     prevEl: '.slide-prev',
                   }}
                 >
+                  {/* @ts-ignore */}
                   {whatClientsSay.reviewsItems.map((item, index) => (
                     <SwiperSlide key={index}>
                       <div className="text-center">

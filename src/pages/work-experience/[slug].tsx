@@ -6,7 +6,9 @@ import WorkExperienceCard from '@/components/work-experience-card';
 import Image from 'next/image';
 
 const WorkExperiencePage = ({
+  // @ts-ignore
   nextWorkExperience,
+  // @ts-ignore
   currentWorkExperience: { frontMatter, content },
 }) => {
   const { title, image, description, category, projectInfo } = frontMatter;
@@ -26,6 +28,7 @@ const WorkExperiencePage = ({
               </h1>
 
               <ul className="row  text-white">
+                {/* @ts-ignore */}
                 {projectInfo.map((item, index) => (
                   <li key={index} className="col-12 mt-8">
                     <p className="mb-2 text-xs uppercase tracking-wider text-white/50">
@@ -93,6 +96,7 @@ const WorkExperiencePage = ({
 export default WorkExperiencePage;
 
 export const getStaticPaths = async () => {
+  // @ts-ignore
   const allWorkExperiences = getDirectoryPages('./src/content/work-experience');
   const paths = allWorkExperiences.map((we) => ({
     params: {
@@ -106,7 +110,9 @@ export const getStaticPaths = async () => {
   };
 };
 
+// @ts-ignore
 export const getStaticProps = async ({ params: { slug } }) => {
+  // @ts-ignore
   const allWorkExperiences = getDirectoryPages('./src/content/work-experience');
 
   const currentIndex = allWorkExperiences.findIndex(

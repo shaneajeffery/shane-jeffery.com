@@ -5,6 +5,7 @@ import Markdown from '@/components/react-markdown';
 import config from '@/config/site.config.json';
 import style from '@/styles/modules/Banner.module.scss';
 
+// @ts-ignore
 const Banner = ({ banner }) => {
   const bannerBgText = config.settings.bannerBgText;
   const { first_name, last_name, bg_text, description, image } = banner;

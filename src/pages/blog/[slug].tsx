@@ -9,8 +9,11 @@ import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { formatDate } from '@/libs/utils/formatDate';
 
 const BlogPage = ({
+  // @ts-ignore
   previousPost,
+  // @ts-ignore
   nextPost,
+  // @ts-ignore
   currentPost: { slug, frontMatter, content },
 }) => {
   const { title, date, image, description, category } = frontMatter;
@@ -175,6 +178,7 @@ const BlogPage = ({
 export default BlogPage;
 
 export const getStaticPaths = async () => {
+  // @ts-ignore
   const allPosts = getDirectoryPages('./src/content/blog');
   const paths = allPosts.map((post) => ({
     params: {
@@ -188,7 +192,9 @@ export const getStaticPaths = async () => {
   };
 };
 
+// @ts-ignore
 export const getStaticProps = async ({ params: { slug } }) => {
+  // @ts-ignore
   const allPosts = getDirectoryPages('./src/content/blog');
 
   const currentIndex = allPosts.findIndex((post) => post.slug == slug);

@@ -8,10 +8,15 @@ import BlogCard from '@/components/blog-card';
 import WorkExperienceCard from '@/components/work-experience-card';
 
 const Home = ({
+  // @ts-ignore
   homepage,
+  // @ts-ignore
   workExperiencePage,
+  // @ts-ignore
   workExperiences,
+  // @ts-ignore
   blogPage,
+  // @ts-ignore
   blogPosts,
 }) => {
   const { banner } = homepage.frontMatter;
@@ -36,6 +41,7 @@ const Home = ({
           </div>
 
           <div className="row gy-4 md:gx-4">
+            {/* @ts-ignore */}
             {workExperiences.map((we, i) => (
               <div
                 key={we.slug}
@@ -68,6 +74,7 @@ const Home = ({
           </div>
 
           <div className="row gy-5 md:gx-4">
+            {/* @ts-ignore */}
             {blogPosts.map((item, index) => (
               <div
                 key={item.slug}
