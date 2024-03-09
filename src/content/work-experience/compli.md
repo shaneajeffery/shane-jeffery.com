@@ -1,7 +1,7 @@
 ---
-date: '04-05-2022'
+date: '01-01-2015'
 title: 'Compli'
-description: 'Branding'
+description: '2015-2018'
 image: '/images/work-experience/compli.jpg'
 color: '#C4D209'
 category: 'Product'

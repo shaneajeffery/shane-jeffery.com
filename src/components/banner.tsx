@@ -76,11 +76,12 @@ const Banner = ({ banner }) => {
               </span>
             </h1>
             <div
-              className="mx-auto mt-5 font-light opacity-80 md:mt-8 md:max-w-xl md:text-xl"
+              className="mx-auto mt-5 font-light opacity-80 md:mt-8 md:text-xl"
+              style={{ maxWidth: '1000px' }}
               data-aos="fade-up-sm"
               data-aos-delay="100"
             >
-              <Markdown content={description} inline={true} />
+              <Markdown content={description} inline={false} />
             </div>
           </div>
         </div>

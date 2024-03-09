@@ -6,13 +6,25 @@ about:
   images:
     - '/images/about/01.jpg'
 
-  title: 'A full stack engineer and technical lead that loves all things Javascript with special emphasis on the React (Redux / RTK, React Query, Apollo, NextJS, Astro) and Node ecosystems (Express, GraphQL, NestJS).'
+  title: |
+
   description: |
+
+    A full stack engineer and technical lead that loves all things Javascript with special emphasis on the React (Redux / RTK, React Query, Apollo, NextJS, Astro) and Node ecosystems (Express, GraphQL, NestJS).
+
+    &nbsp;
+
+    Currently (March 2024), I am learning more advanced Python (FastAPI, Flask, SqlAlchemy, SqlModel, PyTorch, TensorFlow) through Udacity for both Web and AI (ML/LLM mainly).
+
+    &nbsp;
+
     I thrive in dynamic environments where I can leverage my expertise to drive impactful change. While I'm open to exploring various sectors, I've discovered a deep passion for both healthcare and education. I'm drawn to these fields because I see them as areas with untapped potential, ripe for innovation and improvement. My goal is to make a significant difference where it matters most.
 
     &nbsp;
 
     One of my greatest joys is leading teams through technical challenges. I find fulfillment in mentoring others, paying forward the invaluable guidance I've received throughout my career. I believe in fostering a culture of growth and collaboration, where everyone has the opportunity to thrive and succeed.
+
+
 
     &nbsp;
 

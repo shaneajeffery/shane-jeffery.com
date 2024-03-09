@@ -1,10 +1,10 @@
 ---
-date: '02-05-2023'
+date: '01-01-2019'
 title: 'Treetop Commons'
-description: 'Color Splash'
+description: '2019'
 image: '/images/work-experience/treetop.jpg'
 color: '#307B93'
-category: 'Art'
+category: 'Education'
 
 projectInfo:
   - title: 'Client'

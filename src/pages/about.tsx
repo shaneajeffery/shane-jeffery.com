@@ -112,74 +112,6 @@ const About = ({ aboutPage }) => {
         </div>
       </section>
 
-      {/* {services.enable && (
-        <section className="py-28">
-          <div className="container">
-            <div className="row mb-16 items-end">
-              <div className="order-2 sm:col-8 sm:order-1">
-                <h2 className="-mt-[6px] text-center font-secondary text-4xl font-medium sm:text-left md:text-5xl">
-                  {services.title}
-                </h2>
-              </div>
-              <div className="order-1 mb-4 block text-center sm:col-4 sm:order-2 sm:mb-0 sm:text-right">
-                <span className="font-secondary text-2xl leading-none text-white/75">
-                  {services.subtitle}
-                </span>
-              </div>
-            </div>
-
-            <div className="row g-0">
-              {services.serviceLists.map((item, index) => (
-                <React.Fragment key={index}>
-                  <div className={`md:col-6 lg:col-4`} data-aos="fade-in">
-                    <div
-                      className={`${item.active ? '' : 'cursor-not-allowed select-none hover:border-white/5'} h-full rounded-lg border border-white/5 p-8 hover:border-white/40`}
-                    >
-                      <span className="font-secondary text-lg font-medium text-white/75">
-                        / {index < 9 ? '0' + (index + 1) : index + 1}
-                      </span>
-                      <h3
-                        className={`my-6 text-3xl ${item.active ? '' : 'text-white/75'}`}
-                      >
-                        {item.title}
-                      </h3>
-                      <div className="text-lg text-white/75">
-                        <Markdown content={item.description} inline={true} />
-                      </div>
-                    </div>
-                  </div>
-                  {index !== services.serviceLists.length - 1 &&
-                    services.rotatingIcon && (
-                      <div
-                        className={`block md:col-6 lg:col-4 md:hidden lg:block`}
-                      >
-                        <div className="flex h-full content-center items-center p-8 py-6">
-                          <svg
-                            className="mx-auto h-10 w-10 animate-spin opacity-10 md:h-16 md:w-16"
-                            style={{
-                              animationDuration: '6000ms',
-                            }}
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="62"
-                            height="62"
-                            viewBox="0 0 23 23"
-                            fill="none"
-                          >
-                            <path
-                              d="M23 12.9234H14.9568L20.6503 18.6169L18.6169 20.6051L12.9234 14.9116V23L10.0766 22.9548V14.9116L4.3831 20.6503L2.39489 18.6169L8.08841 12.9234H0V10.0766H8.08841L2.39489 4.33792L4.3831 2.3497L10.0766 8.08841V0H12.9234V8.08841L18.6621 2.3497L20.6503 4.33792L14.9568 10.0766H23V12.9234Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    )}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-        </section>
-      )} */}
-
       <section className="rounded-b-2xl  py-28 " data-aos="fade-in">
         <div className="container">
           <div className="row mb-16 items-end">
@@ -205,10 +137,6 @@ const About = ({ aboutPage }) => {
                     nextEl: '.slide-next',
                     prevEl: '.slide-prev',
                   }}
-                  // autoplay={{
-                  //   delay: 5000,
-                  //   disableOnInteraction: false,
-                  // }}
                 >
                   {whatClientsSay.reviewsItems.map((item, index) => (
                     <SwiperSlide key={index}>

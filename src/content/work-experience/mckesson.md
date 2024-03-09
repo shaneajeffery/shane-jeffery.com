@@ -1,10 +1,10 @@
 ---
-date: '04-05-2023'
+date: '01-01-2021'
 title: 'McKesson'
-description: ''
+description: '2021 - 2024'
 image: '/images/work-experience/mckesson.jpg'
 color: '#55487D'
-category: ''
+category: 'Healthcare'
 
 projectInfo:
   - title: 'Client'

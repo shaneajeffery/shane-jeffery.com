@@ -1,10 +1,10 @@
 ---
-date: '02-05-2023'
-title: 'CocaCola'
-description: 'Branding'
+date: '01-01-2020'
+title: 'Hewlett-Packard'
+description: '2020 - 2021'
 image: '/images/work-experience/hp.jpg'
 color: '#BE0000'
-category: 'Product'
+category: 'Electronics'
 
 projectInfo:
   - title: 'Client'

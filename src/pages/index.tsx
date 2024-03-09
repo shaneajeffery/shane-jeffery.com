@@ -103,9 +103,9 @@ export const getStaticProps = () => {
   const workExperiencePage = getSinglePage(
     './src/content/work-experience/_index.md'
   );
-  const workExperiences = getDirectoryPages('./src/content/work-experience', 5);
+  const workExperiences = getDirectoryPages('./src/content/work-experience', 6);
   const blogPage = getSinglePage('./src/content/blog/_index.md');
-  const blogPosts = getDirectoryPages('./src/content/blog', 3);
+  const blogPosts = getDirectoryPages('./src/content/blog', 6);
 
   return {
     props: {

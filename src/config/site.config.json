@@ -1,26 +1,25 @@
 {
-    "metaData": {
-        "title": "Shane Jeffery",
-        "description": "Full Stack Software Engineer and Technical Lead specializing in Typescript, React, Redux, Vue, Vuex, Node, Express, Graphql, Java, Spring Boot, Docker, and Kubernetes.",
-        "keyword": "full stack, software engineer, full stack software engineer, technical lead, typescript, react, redux, vue, vuex, node, express, graphql, java, spring boot, docker, kubernetes"
+  "metaData": {
+    "title": "Shane Jeffery",
+    "description": "Full Stack Software Engineer and Technical Lead specializing in Typescript, React, Redux, Vue, Vuex, Node, Express, Graphql, Python, Django, Flask, SqlAlchemy, SqlModel, Docker, and Kubernetes.",
+    "keyword": "full stack, software engineer, full stack software engineer, technical lead, typescript, react, redux, vue, vuex, node, express, graphql, python, fastapi, django, flask, sqlalchemy, sqlmodel, docker, kubernetes"
+  },
+  "baseURL": "https://www.shane-jeffery.com",
+  "favicon": "/images/favicon.png",
+  "settings": {
+    "bannerBgText": false
+  },
+  "copyright": "© 2024 Shane Jeffery. All rights reserved.",
+  "socialLinks": [
+    {
+      "name": "LINKEDIN",
+      "fullName": "Linkedin",
+      "link": "https://www.linkedin.com/in/shaneajeffery/"
     },
-    "baseURL": "https://www.shane-jeffery.com",
-    "favicon": "/images/favicon.png",
-    "settings": {
-        "bannerBgText": false,
-        "deviceIndicator": false
-    },
-    "copyright": "© 2024 Shane Jeffery. All rights reserved.",
-    "socialLinks": [
-        {
-            "name": "LINKEDIN",
-            "fullName": "Linkedin",
-            "link": "https://www.linkedin.com/in/shaneajeffery/"
-        },
-        {
-            "name": "GITHUB",
-            "fullName": "Github",
-            "link": "https://www.github.com/shaneajeffery"
-        }
-    ]
+    {
+      "name": "GITHUB",
+      "fullName": "Github",
+      "link": "https://www.github.com/shaneajeffery"
+    }
+  ]
 }

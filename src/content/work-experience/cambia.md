@@ -1,10 +1,10 @@
 ---
-date: '01-01-2023'
-title: 'Cambia Health Solutions'
-description: 'Ui/Ux Design'
+date: '01-01-2018'
+title: 'Cambia Health'
+description: '2018 - 2019'
 image: '/images/work-experience/cambia.png'
 color: '#81A92E'
-category: 'Website'
+category: 'Healthcare'
 
 projectInfo:
   - title: 'Client'
