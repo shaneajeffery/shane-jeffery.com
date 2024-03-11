@@ -78,6 +78,16 @@ The introduction of a singular component library has proven instrumental in cons
 - Storybook
 - Jest / React Testing Library
 
-## Notable Project #3: Typescript Implementation for Inherited Projects
+## Notable Project #3: Typescript Implementation for 5 Inherited Projects
 
-Coming soon...
+### Problem Statement
+
+In the realm of enterprise software development, the absence of type safety coupled with the lack of code linting and prettification poses significant challenges. This not only diminishes the enjoyment of the development process but also transforms it into a daunting ordeal.
+
+### Solution
+
+The solution lies in a systematic approach, wherein each project undergoes iterative transformation. By prioritizing the conversion of numerous components and containers to Typescript, we embark on a journey towards enhanced code integrity and readability.
+
+### Result
+
+The implementation of Typescript brings forth a multitude of benefits, chief among them being the availability of type checking. Moreover, our endeavors unearthed a substantial amount of redundancy within each project, accounting for approximately 5-10% of the codebase. By rectifying unused variables, eliminating obsolete imports, and standardizing variable types, we succeeded in streamlining the codebase, resulting in cleaner and more robust software. Additionally, this endeavor simplified our testing procedures, paving the way for a more efficient development lifecycle.
