@@ -50,7 +50,7 @@ export const WorkExperienceCardBlock = ({
   );
 };
 
-export const Card = ({
+const Card = ({
   className,
   image,
   title,

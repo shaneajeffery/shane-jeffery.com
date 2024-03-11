@@ -17,7 +17,7 @@ projectInfo:
       React, React Query, Typescript, Jest, React Testing Library, Storybook, Chromatic, Cypress, Go, Azure Devops for CI, Microfrontends, Emotion, Tailwinds
 ---
 
-## Notable Project #1 (And Only 1): HP 3D Center
+## Main Notable Project: HP 3D Center
 
 ### Problem Statement
 
