@@ -55,7 +55,7 @@ const WorkExperiencePage = ({
             </div>
 
             <div className="lg:col-10">
-              <hr className="mb-24 mt-28 opacity-5" />
+              <hr className="mb-10 mt-10 opacity-5" />
             </div>
           </div>
 

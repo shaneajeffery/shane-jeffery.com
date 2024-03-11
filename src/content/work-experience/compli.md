@@ -16,3 +16,27 @@ projectInfo:
     data: |
       Node.js (Express), PHP (Laravel), Vue.js, Vuex, gRPC, REST, mySQL, MongoDB, InfluxDB, Kubernetes, Docker, ConcourseCI, AWS (EC2, S3), mySQL, jQuery, Jest, Mocha, Chai, Sinon, Istanbul
 ---
+
+## Notable Project #1: Scheduler for Compliance Training Rewrite
+
+### Problem Statement
+
+### Solution
+
+### Result
+
+## Notable Project #2: Users Microfrontend & Microservice
+
+### Problem Statement
+
+### Solution
+
+### Result
+
+## Notable Project #2: Import / Export Compliance Reporting Rewrite
+
+### Problem Statement
+
+### Solution
+
+### Result

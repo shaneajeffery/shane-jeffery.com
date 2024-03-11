@@ -16,3 +16,11 @@ projectInfo:
     data: |
       PHP, Angular, mySQL, SAML
 ---
+
+## Main Project: GradPoint Integration for In-House LMS
+
+### Problem Statement
+
+### Solution
+
+### Result
