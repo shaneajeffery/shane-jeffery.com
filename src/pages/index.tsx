@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import Banner from '@/components/banner';
 import BlogCard from '@/components/blog-card';
-import WorkExperienceCard from '@/components/work-experience-card';
+import WorkExperienceCardBlock from '@/components/work-experience-card-block';
 
 const Home = ({
   // @ts-ignore
@@ -41,16 +41,7 @@ const Home = ({
           </div>
 
           <div className="row gy-4 md:gx-4">
-            {/* @ts-ignore */}
-            {workExperiences.map((we) => (
-              <div key={we.slug} className={`${'sm:col-2'}`}>
-                <WorkExperienceCard
-                  slug={we.slug}
-                  frontMatter={we.frontMatter}
-                  onListingPage={true}
-                />
-              </div>
-            ))}
+            <WorkExperienceCardBlock items={workExperiences} />
           </div>
         </div>
       </section>

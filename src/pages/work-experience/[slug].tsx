@@ -1,15 +1,14 @@
 import Layout from '@/components/layout';
 import Markdown from '@/components/react-markdown';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
-
-import WorkExperienceCard from '@/components/work-experience-card';
+import WorkExperienceCardBlock from '@/components/work-experience-card-block';
 import Image from 'next/image';
 
 const WorkExperiencePage = ({
   // @ts-ignore
-  nextWorkExperience,
-  // @ts-ignore
   currentWorkExperience: { frontMatter, content },
+  // @ts-ignore
+  allWorkExperiences,
 }) => {
   const { title, image, category, projectInfo } = frontMatter;
 
@@ -74,16 +73,13 @@ const WorkExperiencePage = ({
         <div className="container">
           <div className="mb-16">
             <h2 className="-mt-[6px] text-center font-secondary text-4xl font-medium md:text-5xl">
-              Next Work Experience
+              Work Experiences
             </h2>
           </div>
           <div className="row justify-center">
-            <div className="lg:col-6">
-              {nextWorkExperience && (
-                <WorkExperienceCard
-                  slug={nextWorkExperience.slug}
-                  frontMatter={nextWorkExperience.frontMatter}
-                />
+            <div className="w-full">
+              {allWorkExperiences && (
+                <WorkExperienceCardBlock items={allWorkExperiences} />
               )}
             </div>
           </div>
@@ -120,13 +116,11 @@ export const getStaticProps = async ({ params: { slug } }) => {
   );
 
   const currentWorkExperience = allWorkExperiences[currentIndex];
-  const nextWorkExperience =
-    allWorkExperiences[currentIndex + 1] || allWorkExperiences[0];
 
   return {
     props: {
       currentWorkExperience: currentWorkExperience,
-      nextWorkExperience: nextWorkExperience,
+      allWorkExperiences: allWorkExperiences,
     },
   };
 };

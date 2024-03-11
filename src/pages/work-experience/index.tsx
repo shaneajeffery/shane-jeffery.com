@@ -1,4 +1,4 @@
-import WorkExperienceCard from '@/components/work-experience-card';
+import WorkExperienceCardBlock from '@/components/work-experience-card-block';
 import Layout from '@/components/layout';
 import PageHeader from '@/components/page-header';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
@@ -15,19 +15,7 @@ const WorkExperience = ({ workExperiencePage, allWorkExperiences }) => {
       <section className="rounded-b-2xl bg-white py-28 text-dark">
         <div className="container">
           <div className="row gy-4 md:gx-4">
-            {/* @ts-ignore */}
-            {allWorkExperiences.map((we, i) => (
-              <div
-                key={we.slug}
-                className={`${'sm:col-3 lg:col-2'} ${i === 4 ? 'hidden lg:block' : ''}`}
-              >
-                <WorkExperienceCard
-                  slug={we.slug}
-                  frontMatter={we.frontMatter}
-                  onListingPage={true}
-                />
-              </div>
-            ))}
+            <WorkExperienceCardBlock items={allWorkExperiences} />
           </div>
         </div>
       </section>
