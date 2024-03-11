@@ -27,7 +27,7 @@ The primary objective was to provide clients, equipped with numerous 3D printers
 
 ### Solution
 
-Embarking on this endeavor, we commenced with a greenfield approach encompassing the entire technological stack. The frontend development was anchored on React/Redux (Thunks), complemented by HP's 3D Print Design System, codenamed Veneer. Simultaneously, the backend infrastructure was constructed using Go, with Redis serving as the designated data store. Data updates were furnished every 10 minutes by our Firmware team, responsible for aggregating and managing the raw data.
+Embarking on this endeavor, we commenced with a greenfield approach encompassing the entire technological stack. The frontend development was anchored on React and React Query, complemented by HP's 3D Print Design System, codenamed Veneer. Simultaneously, the backend infrastructure was constructed using Go, with Redis serving as the designated data store. Data updates were furnished every 10 minutes by our Firmware team, responsible for aggregating and managing the raw data.
 
 Our team composition comprised four frontend engineers (including one lead, two seniors, and one junior), three backend engineers (comprising one lead and two seniors), and two senior QA engineers. Despite the robust team structure, the project's fruition spanned a year. Predominantly, our challenges emanated from collaborating with the firmware team and deciphering the data's cadence to ensure accurate computation and visualization.
 
@@ -35,7 +35,7 @@ Our team composition comprised four frontend engineers (including one lead, two 
 
 The culmination of our efforts is showcased in the accompanying video snippet:
 
-![HP 3D Center Video](https://www.youtube.com/watch?v=93IeL9Xijsw&ab_channel=HP)
+[![HP 3D Center Video](https://img.youtube.com/vi/93IeL9Xijsw/0.jpg)](https://www.youtube.com/watch?v=93IeL9Xijsw&ab_channel=HP)
 
 ### Technology Used
 
