@@ -1,4 +1,4 @@
 ---
-title: 'Web Dev, AI, Fitness, & Food'
+title: 'Experiences that Shaped My Career'
 subtitle: 'Blog'
 ---
