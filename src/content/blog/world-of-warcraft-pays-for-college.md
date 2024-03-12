@@ -12,7 +12,7 @@ In 2003, during the transitional phase between high school and college, I found 
 
 ### Introducing Markee Dragon
 
-In search of diversifying my gaming experience beyond my warrior character, I delved into the realm of account trading and encountered Markee Dragon, a reputable platform recognized for its facilitation of transactions involving MMO accounts, in-game currency, and related services. Captivated by the prospects, I decided to list my account for potential trades or sales, resulting in a swift influx of substantial offers, some exceeding $8000 within a mere day.
+In search of diversifying my gaming experience beyond my warrior main, I delved into the realm of account trading and encountered Markee Dragon, a platform recognized for its facilitation of transactions involving MMO accounts, in-game currency, and related services. Captivated by the prospects, I decided to list my account for potential trades or sales, resulting in a swift influx of substantial offers, some exceeding $8000 within a mere day.
 
 While I ultimately opted to retain possession of my account, this experience illuminated the lucrative potential of the World of Warcraft resale market, presenting an enticing opportunity for supplemental income.
 
@@ -24,9 +24,9 @@ Over the ensuing years, my venture steadily gained momentum, yielding a substant
 
 ### Ongoing Triumph
 
-From 2008 to 2018, I independently operated KHAccounts.net, overseeing all aspects of the business, from account acquisition to sales. Throughout this decade-long tenure, I evolved the platform's infrastructure, transitioning from a rudimentary PHP/JQuery website to a sophisticated e-commerce platform integrated with modern technologies like React, Laravel, and MySQL.
+From 2008 to 2018, I independently operated KHAccounts.net, overseeing all aspects of the business, from account acquisition to sales. Throughout this decade-long tenure, I evolved the platform's infrastructure, transitioning from a rudimentary PHP/JQuery website to a sophisticated e-commerce platform integrated with modern technologies like React, Laravel, MySQL, and using Stripe for payment processing.
 
-Furthermore, I conceived MaskedArmory.com, a revolutionary platform designed to anonymize World of Warcraft character profiles, circumventing potential punitive actions from Blizzard Entertainment while maintaining the integrity of the account resale ecosystem.
+Furthermore, I conceived MaskedArmory.com, a platform designed to anonymize World of Warcraft character profiles, circumventing potential punitive actions from Blizzard Entertainment while maintaining the integrity of the account resale ecosystem.
 
 ### The Epilogue
 
@@ -34,7 +34,7 @@ By the conclusion of 2018, recognizing the evolving landscape of the WoW communi
 
 While KHAccounts.net now resides in the annals of my past endeavors, I take pride in the legacy it represents and the invaluable experiences gained from engaging with gamers worldwide. Indeed, the journey was punctuated by notable achievements and rewarding connections, culminating in a gratifying and prosperous chapter of my life.
 
-For further insights into my entrepreneurial odyssey, a wealth of information is accessible through search queries for 'Shane Jeffery KHAccounts.net' or 'Shane Jeffery MaskedArmory.com'. These endeavors stand as testament to the entrepreneurial spirit and resilience cultivated during my formative years, leaving an indelible mark on my professional trajectory.
+For further insights into my entrepreneurial odyssey, information is accessible through search queries for 'Shane Jeffery KHAccounts.net' or 'Shane Jeffery MaskedArmory.com'. These endeavors stand as testament to the entrepreneurial spirit and resilience cultivated during my formative years, leaving an indelible mark on my professional trajectory.
 
 ### Additional Resources
 
