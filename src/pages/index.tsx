@@ -66,7 +66,7 @@ const Home = ({
             {blogPosts.map((item, index) => (
               <div
                 key={item.slug}
-                className="init-delay sm:col-3"
+                className="init-delay sm:col-6"
                 data-aos="fade-up-sm"
                 data-aos-duration="500"
                 style={{

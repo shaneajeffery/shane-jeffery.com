@@ -9,13 +9,24 @@ const BlogCard = ({ frontMatter, slug }) => {
   return (
     <article className="group relative text-center">
       <div className="relative mb-8 overflow-hidden rounded-lg">
-        <Image
-          src={image}
-          alt={title}
-          width={620}
-          height={500}
-          className="w-full rounded-lg bg-light/20 object-cover duration-700 group-hover:-rotate-1 group-hover:scale-110 group-hover:brightness-75"
-        />
+        <div className="relative z-10 h-[275px] overflow-hidden rounded-lg bg-black/20">
+          <Link href={`/blog/${slug}`} className="stretched-link">
+            <Image
+              className="z-10 mx-auto h-[275px] w-auto rounded-lg object-cover object-center"
+              src={image}
+              alt={title}
+              width={`820`}
+              height={`275`}
+            />
+            <Image
+              className="absolute left-0 top-0 -z-10 h-[500px] w-full scale-110 object-cover opacity-50 blur-sm filter"
+              src={image}
+              alt={title}
+              width={`100`}
+              height={`100`}
+            />
+          </Link>
+        </div>
       </div>
       <div className="px-6 transition-all duration-500 group-hover:opacity-60">
         <div className="mb-4 flex flex-wrap items-center justify-center space-x-5">

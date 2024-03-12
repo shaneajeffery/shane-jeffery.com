@@ -11,7 +11,7 @@ const Blog = ({ blogPage, blogPosts }) => {
   let { title, subtitle } = blogPage.frontMatter;
   subtitle = subtitle + ` (${totalPosts})`;
 
-  const postsToShow = 6;
+  const postsToShow = 8;
   const [posts, setPosts] = useState(blogPosts.slice(0, postsToShow));
   const [loadMore, setLoadMore] = useState(true);
 
@@ -19,9 +19,11 @@ const Blog = ({ blogPage, blogPosts }) => {
     let currentLength = posts.length;
     let postLoaded = postsToShow + currentLength;
     let isMore = currentLength < totalPosts;
+
     const nextResults = isMore
       ? blogPosts.slice(currentLength, currentLength + postsToShow)
       : [];
+
     setPosts([...posts, ...nextResults]);
     totalPosts < postLoaded && setLoadMore(false);
   };
@@ -32,12 +34,12 @@ const Blog = ({ blogPage, blogPosts }) => {
 
       <section className="rounded-b-2xl bg-white py-28 text-dark">
         <div className="container">
-          <div className="row gy-5 md:gx-4">
+          <div className="row gy-5 md:gx-3">
             {/* @ts-ignore */}
             {posts.map((item, index) => (
               <div
                 key={item.slug}
-                className="init-delay sm:col-3"
+                className="init-delay sm:col-4"
                 data-aos="fade-up-sm"
                 data-aos-duration="500"
                 style={{
