@@ -1,4 +1,4 @@
 ---
-title: 'Experiences that Shaped My Career'
+title: 'Career-Shaping Experiences'
 subtitle: 'Blog'
 ---
