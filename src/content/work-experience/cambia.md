@@ -21,14 +21,14 @@ projectInfo:
 
 ### Problem Statement
 
-Much like McKesson, Cambia was struggling how to manage the content lifecycle. This time around it was the content powering the member portals for all 3 plans -- Regence, Bridgespan Health, and Asurus. The content authors needed a place where they could create Content and then lay out that content on the page and have that deploy to production as is.
+Similar to McKesson, Cambia faced challenges in effectively managing the content lifecycle, particularly in relation to the content driving member portals across three plans: Regence, Bridgespan Health, and Asurus. The imperative was to establish a system wherein content authors could seamlessly create and deploy content to production while maintaining its intended layout.
 
 ### Solution
 
-The first thing we needed to figure out was where the content would live. Two of the content authors had prior experience with Contentful, so we did a POC with it and it served all of our use case for both the POC and for future state. After we did the POC, we then spent time with the content authors to build out a UI abstraction layer on top of Contentful's Headless CMS.
+The initial step involved determining the ideal platform for housing the content. Following insights from two content authors with previous experience in Contentful, a Proof of Concept (POC) was conducted, confirming its suitability for current and future requirements. Subsequently, collaborative efforts were directed towards developing a user interface (UI) abstraction layer atop Contentful's Headless Content Management System (CMS).
 
-From there, we needed a way to lay out that content in a meaningful way for the member portals. So, we leveraged React DND, Material UI, and a whole lot of custom logic to create a drag-and-drop page builder that would allow for multi-column/row layouts using the custom curated content blocks.
+Subsequent to establishing the content infrastructure, the focus shifted towards structuring the content effectively for member portals. This necessitated the utilization of technologies such as React DND, Material UI, and bespoke logic to engineer a drag-and-drop page builder. This tool facilitated the creation of multi-column/row layouts employing curated content blocks.
 
 ### Result
 
-Ultimately, we ended up with a solution that allowed content authors to get changes out to production with no developer intervention. But, no new feature development was needed as all of the content blocks could be created in the UI abstraction by the content authors and then they could use them to build there
+The resultant solution empowered content authors to effect changes in production autonomously, eliminating the need for developer intervention. Moreover, the system obviated the necessity for new feature development, as content blocks could be generated within the UI abstraction layer, affording content authors the flexibility to construct pages accordingly.
