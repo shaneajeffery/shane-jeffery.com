@@ -2,7 +2,7 @@
 title: 'Part 1: Building Chatbot Application to Generate WoW Sales Template'
 description: ''
 image: '/images/blog/03.jpg'
-date: '2024-03-11'
+date: '2024-03-03'
 category: 'career'
 ---
 
