@@ -1,5 +1,5 @@
 ---
-title: 'World of Warcraft Pays for College'
+title: 'World of Warcraft Paid for College'
 description: ''
 image: '/images/blog/01.jpg'
 date: '2024-03-11'
