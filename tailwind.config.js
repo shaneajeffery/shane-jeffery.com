@@ -24,8 +24,8 @@ module.exports = {
         light: '#ccc',
       },
       fontFamily: {
-        primary: ['var(--font-outfit)', 'serif'],
-        secondary: ['var(--font-melodrama)', 'serif'],
+        primary: ['var(--font-geist-sans)', 'serif'],
+        secondary: ['var(--font-geist-mono)', 'serif'],
       },
     },
   },

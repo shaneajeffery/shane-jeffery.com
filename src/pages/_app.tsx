@@ -1,21 +1,10 @@
 import AOS from 'aos';
 import { useEffect } from 'react';
-import { Outfit } from 'next/font/google';
-import localFont from 'next/font/local';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 
 import '../styles/styles.scss';
 import 'aos/dist/aos.css';
-
-const outfit = Outfit({
-  weight: ['200', '300', '400', '500'],
-  display: 'swap',
-  subsets: ['latin'],
-  variable: '--font-outfit',
-});
-
-const melodrama = localFont({
-  src: '../assets/fonts/melodrama/Melodrama-Variable.woff2',
-});
 
 // @ts-ignore
 const AverApp = ({ Component, pageProps }) => {
@@ -30,7 +19,7 @@ const AverApp = ({ Component, pageProps }) => {
   return (
     <section
       // @ts-ignore
-      className={`${outfit.variable} ${melodrama.variable} font-primary`}
+      className={`${GeistSans.variable} ${GeistMono.variable} font-primary`}
     >
       <Component {...pageProps} />
     </section>
