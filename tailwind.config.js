@@ -25,7 +25,7 @@ module.exports = {
       },
       fontFamily: {
         primary: ['var(--font-geist-sans)', 'serif'],
-        secondary: ['var(--font-geist-mono)', 'serif'],
+        secondary: ['var(--font-geist-sans)', 'serif'],
       },
     },
   },
