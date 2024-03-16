@@ -5,6 +5,7 @@ import { GeistMono } from 'geist/font/mono';
 
 import '../styles/styles.scss';
 import 'aos/dist/aos.css';
+import PlausibleProvider from 'next-plausible';
 
 // @ts-ignore
 const AverApp = ({ Component, pageProps }) => {
@@ -21,7 +22,9 @@ const AverApp = ({ Component, pageProps }) => {
       // @ts-ignore
       className={`${GeistSans.variable} ${GeistMono.variable} font-primary`}
     >
-      <Component {...pageProps} />
+      <PlausibleProvider domain="shane-jeffery.com">
+        <Component {...pageProps} />
+      </PlausibleProvider>
     </section>
   );
 };
