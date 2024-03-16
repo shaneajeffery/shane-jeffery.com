@@ -3,7 +3,6 @@ import Footer from '@/components/footer';
 import Header from '@/components/header';
 import siteConfig from '@/config/site.config.json';
 import Head from 'next/head';
-import { GoogleAnalytics } from '@next/third-parties/google';
 
 interface Props {
   metaTitle?: string;
@@ -61,8 +60,6 @@ const Layout = ({ metaTitle, className, children }: Props) => {
       </main>
 
       <Footer />
-
-      <GoogleAnalytics gaId="G-M3FJPHD35Z" />
     </>
   );
 };
