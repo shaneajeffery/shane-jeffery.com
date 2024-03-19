@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Banner from '@/components/banner';
 import BlogCard from '@/components/blog-card';
 import WorkExperienceCardBlock from '@/components/work-experience-card-block';
-import { Key } from 'react';
 
 const Home = ({
   homepage,
@@ -61,10 +60,7 @@ const Home = ({
 
           <div className="row gy-5 md:gx-4">
             {blogPosts.map(
-              (
-                item: { slug: Key | null | undefined; frontMatter: any },
-                index: number
-              ) => (
+              (item: { slug: string; frontMatter: any }, index: number) => (
                 <div
                   key={item.slug}
                   className="init-delay sm:col-6"

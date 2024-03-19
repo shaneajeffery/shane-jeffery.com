@@ -3,7 +3,7 @@ import Layout from '@/components/layout';
 import PageHeader from '@/components/page-header';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { getSinglePage } from '@/libs/getSinglePage';
-import { Key, useState } from 'react';
+import { useState } from 'react';
 
 const Blog = ({ blogPage, blogPosts }: { [key: string]: any }) => {
   const totalPosts = blogPosts.length;
@@ -35,10 +35,7 @@ const Blog = ({ blogPage, blogPosts }: { [key: string]: any }) => {
         <div className="container">
           <div className="row gy-5 md:gx-3">
             {posts.map(
-              (
-                item: { slug: Key | null | undefined; frontMatter: any },
-                index: number
-              ) => (
+              (item: { slug: string; frontMatter: any }, index: number) => (
                 <div
                   key={item.slug}
                   className="init-delay sm:col-6"
