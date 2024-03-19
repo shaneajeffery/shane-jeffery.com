@@ -9,7 +9,7 @@ banner:
 
     &nbsp;
 
-    Currently, learning more advanced Python (FastAPI, Flask, SqlAlchemy, SqlModel, PyTorch, TensorFlow) through Udacity for both Web and AI (ML/LLM mainly).
+    Currently (March 2024), I am spending my time learning Go through Educative.io to further my ability to run the full-stack.
 
 workProcess:
   enable: false
