@@ -2,8 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
-// @ts-ignore
-export const getSinglePage = (filePath) => {
+export const getSinglePage = (filePath: string) => {
   const readFileContents = fs.readFileSync(
     path.join(process.cwd(), filePath),
     'utf8'

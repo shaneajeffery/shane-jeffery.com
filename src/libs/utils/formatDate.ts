@@ -1,13 +1,13 @@
-// @ts-ignore
-export const formatDate = (date) => {
+export const formatDate = (date: Date) => {
   const dateInput = new Date(date);
-  let day = dateInput.getDate();
-  // @ts-ignore
-  day = dateInput.getDate() < 10 ? `0${day}` : day;
+  const currentDay = dateInput.getDate();
+
+  const paddedCurrentDay =
+    dateInput.getDate() < 10 ? `0${currentDay}` : currentDay;
 
   const month = dateInput.toLocaleString('default', { month: 'short' });
   const year = dateInput.getFullYear().toString().substring(-2);
-  const theDate = `${day} ${month} / ${year}`;
+  const theDate = `${paddedCurrentDay} ${month} / ${year}`;
 
   return theDate;
 };

@@ -3,15 +3,23 @@ import PageHeader from '@/components/page-header';
 import Markdown from '@/components/react-markdown';
 import { getSinglePage } from '@/libs/getSinglePage';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import {
+  JSXElementConstructor,
+  PromiseLikeOfReactNode,
+  ReactElement,
+  ReactNode,
+  ReactPortal,
+  useEffect,
+  useState,
+} from 'react';
 
 import { A11y, Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
-// @ts-ignore
-const About = ({ aboutPage }) => {
+const About = ({ aboutPage }: { [key: string]: any }) => {
   const { title, subtitle, about, whatClientsSay } = aboutPage.frontMatter;
 
   const [randomNumbers, setRandomNumbers] = useState<any>([]);
@@ -32,32 +40,6 @@ const About = ({ aboutPage }) => {
     generateUniqueRandomNumbers();
   }, [about.images]);
 
-  // Swap Images
-  const imageRef = useRef(null);
-  const imageIndexRef = useRef(0);
-
-  const swapImages = () => {
-    // @ts-ignore
-    const { children } = imageRef.current;
-    const lastIndex = children.length - 1;
-    const previousIndex = imageIndexRef.current;
-
-    const nextIndex = previousIndex === 0 ? lastIndex : previousIndex - 1;
-
-    for (let i = 0; i < children.length; i++) {
-      children[i].style.zIndex = i === nextIndex ? 99 : 0;
-    }
-
-    imageIndexRef.current = nextIndex;
-  };
-
-  // Rotate Icon & Swap Images
-  const [rotate, setRotate] = useState(0);
-  const handleClick = () => {
-    setRotate(rotate + 360);
-    swapImages();
-  };
-
   return (
     <Layout metaTitle={title}>
       <PageHeader title={title} subtitle={subtitle} />
@@ -69,30 +51,27 @@ const About = ({ aboutPage }) => {
               className="col-10 mb-16 md:col-6 lg:col-4 lg:mb-0"
               data-aos="fade-up-sm"
             >
-              <div
-                ref={imageRef}
-                onClick={() => handleClick()}
-                className="relative z-10 mx-8 cursor-pointer transition-transform duration-300 ease-out hover:scale-105"
-              >
-                {/* @ts-ignore */}
-                {about.images.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`transition-transform ${index !== 0 ? `absolute left-0 top-0` : 'relative'}`}
-                    style={{
-                      zIndex: -index,
-                      transform: `rotate(${randomNumbers[index]}deg)`,
-                    }}
-                  >
-                    <Image
-                      src={item}
-                      alt="Image"
-                      width={500}
-                      height={607}
-                      className="rounded-lg bg-light/10"
-                    />
-                  </div>
-                ))}
+              <div className="relative z-10 mx-8 cursor-pointer transition-transform duration-300 ease-out hover:scale-105">
+                {about.images.map(
+                  (item: string | StaticImport, index: number) => (
+                    <div
+                      key={index}
+                      className={`transition-transform ${index !== 0 ? `absolute left-0 top-0` : 'relative'}`}
+                      style={{
+                        zIndex: -index,
+                        transform: `rotate(${randomNumbers[index]}deg)`,
+                      }}
+                    >
+                      <Image
+                        src={item}
+                        alt="Image"
+                        width={500}
+                        height={607}
+                        className="rounded-lg bg-light/10"
+                      />
+                    </div>
+                  )
+                )}
               </div>
             </div>
             <div
@@ -139,18 +118,52 @@ const About = ({ aboutPage }) => {
                     prevEl: '.slide-prev',
                   }}
                 >
-                  {/* @ts-ignore */}
-                  {whatClientsSay.reviewsItems.map((item, index) => (
-                    <SwiperSlide key={index}>
-                      <div className="text-center">
-                        <div className="mb-4 rounded-lg bg-light/10 px-5 py-8 text-left text-lg md:px-10">
-                          <Markdown content={item.review} inline={false} />
+                  {whatClientsSay.reviewsItems.map(
+                    (
+                      item: {
+                        review: string;
+                        name:
+                          | string
+                          | number
+                          | boolean
+                          | ReactElement<
+                              any,
+                              string | JSXElementConstructor<any>
+                            >
+                          | Iterable<ReactNode>
+                          | ReactPortal
+                          | PromiseLikeOfReactNode
+                          | null
+                          | undefined;
+                        info:
+                          | string
+                          | number
+                          | boolean
+                          | ReactElement<
+                              any,
+                              string | JSXElementConstructor<any>
+                            >
+                          | Iterable<ReactNode>
+                          | ReactPortal
+                          | PromiseLikeOfReactNode
+                          | null
+                          | undefined;
+                      },
+                      index: number
+                    ) => (
+                      <SwiperSlide key={index}>
+                        <div className="text-center">
+                          <div className="mb-4 rounded-lg bg-light/10 px-5 py-8 text-left text-lg md:px-10">
+                            <Markdown content={item.review} inline={false} />
+                          </div>
+                          <p className="mb-1 text-2xl font-medium">
+                            {item.name}
+                          </p>
+                          <p className="text-white/75">{item.info}</p>
                         </div>
-                        <p className="mb-1 text-2xl font-medium">{item.name}</p>
-                        <p className="text-white/75">{item.info}</p>
-                      </div>
-                    </SwiperSlide>
-                  ))}
+                      </SwiperSlide>
+                    )
+                  )}
                 </Swiper>
 
                 <button

@@ -1,7 +1,7 @@
 import Layout from '@/components/layout';
 import Link from 'next/link';
 
-export default function PageNotFound() {
+const PageNotFound = () => {
   return (
     <Layout metaTitle="Page Not Found">
       <section className="rounded-b-2xl bg-white py-28 text-dark">
@@ -27,4 +27,6 @@ export default function PageNotFound() {
       </section>
     </Layout>
   );
-}
+};
+
+export default PageNotFound;

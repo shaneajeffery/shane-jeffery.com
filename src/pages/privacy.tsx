@@ -3,8 +3,7 @@ import PageHeader from '@/components/page-header';
 import Markdown from '@/components/react-markdown';
 import { getSinglePage } from '@/libs/getSinglePage';
 
-// @ts-ignore
-const Privacy = ({ privacyPage }) => {
+const Privacy = ({ privacyPage }: { [key: string]: any }) => {
   const { title, subtitle } = privacyPage.frontMatter;
 
   return (

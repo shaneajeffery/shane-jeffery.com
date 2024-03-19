@@ -11,7 +11,7 @@ const BreadcrumbItem = ({ children, href, ...props }: Props) => {
   return (
     <li {...props}>
       <Link className="link" href={href} passHref>
-        {capitalizeText(children)}
+        {capitalizeText(children as string)}
       </Link>
     </li>
   );

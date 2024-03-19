@@ -9,12 +9,11 @@ import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { formatDate } from '@/libs/utils/formatDate';
 
 const BlogPage = ({
-  // @ts-ignore
   previousPost,
-  // @ts-ignore
   nextPost,
-  // @ts-ignore
   currentPost: { slug, frontMatter, content },
+}: {
+  [key: string]: any;
 }) => {
   const { title, date, image, description, category } = frontMatter;
   const pageUrl = `${siteConfig.baseURL.replace(/\/$|$/, '/')}blog/${slug}`;
@@ -178,7 +177,6 @@ const BlogPage = ({
 export default BlogPage;
 
 export const getStaticPaths = async () => {
-  // @ts-ignore
   const allPosts = getDirectoryPages('./src/content/blog');
   const paths = allPosts.map((post) => ({
     params: {
@@ -192,9 +190,11 @@ export const getStaticPaths = async () => {
   };
 };
 
-// @ts-ignore
-export const getStaticProps = async ({ params: { slug } }) => {
-  // @ts-ignore
+export const getStaticProps = async ({
+  params: { slug },
+}: {
+  [key: string]: any;
+}) => {
   const allPosts = getDirectoryPages('./src/content/blog');
 
   const currentIndex = allPosts.findIndex((post) => post.slug == slug);

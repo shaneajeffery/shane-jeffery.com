@@ -1,4 +1,4 @@
- ![Vercel Deploy](https://therealsujitk-vercel-badge.vercel.app/?app=shane-jeffery-com) 
+![Vercel Deploy](https://therealsujitk-vercel-badge.vercel.app/?app=shane-jeffery-com)
 
 # Shane Jeffery Personal Website
 
@@ -8,13 +8,10 @@
 
 Deployed and hosted with Vercel.
 
-Personal website built using React, NextJS,and TailwindCSS. All content is being delivered locally from Markdown files, but will be iterating and moving to Contentful's headless CMS soon.
-
-Test coverage to be added soon with Jest, RTL, and possibly some E2E with Cypress or Playwright.
+Personal website built using React, NextJS,and TailwindCSS. All content is being delivered locally from Markdown files.
 
 ## Todo
 
-- [ ] Migrate markdown content files to Contentful.
 - [ ] Write unit tests with Jest and RTL.
 - [ ] Add badge for unit test coverage once tests are written.
 - [ ] Write E2E tests with either Cypress or Playwright.

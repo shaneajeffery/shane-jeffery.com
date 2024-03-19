@@ -2,8 +2,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { formatDate } from '@/libs/utils/formatDate';
 
-// @ts-ignore
-const BlogCard = ({ frontMatter, slug }) => {
+interface FrontMatter {
+  title: string;
+  date: Date;
+  image: string;
+  category: string;
+}
+
+interface Props {
+  frontMatter: FrontMatter;
+  slug: string;
+}
+
+const BlogCard = ({ frontMatter, slug }: Props) => {
   const { title, date, image, category } = frontMatter;
 
   return (

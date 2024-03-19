@@ -3,10 +3,9 @@ import Layout from '@/components/layout';
 import PageHeader from '@/components/page-header';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { getSinglePage } from '@/libs/getSinglePage';
-import { useState } from 'react';
+import { Key, useState } from 'react';
 
-// @ts-ignore
-const Blog = ({ blogPage, blogPosts }) => {
+const Blog = ({ blogPage, blogPosts }: { [key: string]: any }) => {
   const totalPosts = blogPosts.length;
   let { title, subtitle } = blogPage.frontMatter;
   subtitle = subtitle + ` (${totalPosts})`;
@@ -35,23 +34,27 @@ const Blog = ({ blogPage, blogPosts }) => {
       <section className="rounded-b-2xl bg-white py-28 text-dark">
         <div className="container">
           <div className="row gy-5 md:gx-3">
-            {/* @ts-ignore */}
-            {posts.map((item, index) => (
-              <div
-                key={item.slug}
-                className="init-delay sm:col-6"
-                data-aos="fade-up-sm"
-                data-aos-duration="500"
-                style={{
-                  // @ts-ignore
-                  '--lg-delay': `${(index % 3) * 75}ms`,
-                  '--md-delay': `${(index % 2) * 75}ms`,
-                  '--sm-delay': `${(index % 2) * 75}ms`,
-                }}
-              >
-                <BlogCard slug={item.slug} frontMatter={item.frontMatter} />
-              </div>
-            ))}
+            {posts.map(
+              (
+                item: { slug: Key | null | undefined; frontMatter: any },
+                index: number
+              ) => (
+                <div
+                  key={item.slug}
+                  className="init-delay sm:col-6"
+                  data-aos="fade-up-sm"
+                  data-aos-duration="500"
+                  style={{
+                    // @ts-ignore
+                    '--lg-delay': `${(index % 3) * 75}ms`,
+                    '--md-delay': `${(index % 2) * 75}ms`,
+                    '--sm-delay': `${(index % 2) * 75}ms`,
+                  }}
+                >
+                  <BlogCard slug={item.slug} frontMatter={item.frontMatter} />
+                </div>
+              )
+            )}
 
             <div className="mt-16 text-center">
               {blogPosts.length > postsToShow && loadMore ? (
@@ -75,7 +78,6 @@ export default Blog;
 
 export const getStaticProps = () => {
   const blogPage = getSinglePage('./src/content/blog/_index.md');
-  // @ts-ignore
   const blogPosts = getDirectoryPages('./src/content/blog');
 
   return {

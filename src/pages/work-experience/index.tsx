@@ -4,8 +4,12 @@ import PageHeader from '@/components/page-header';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import { getSinglePage } from '@/libs/getSinglePage';
 
-// @ts-ignore
-const WorkExperience = ({ workExperiencePage, allWorkExperiences }) => {
+const WorkExperience = ({
+  workExperiencePage,
+  allWorkExperiences,
+}: {
+  [key: string]: any;
+}) => {
   const { title, subtitle } = workExperiencePage.frontMatter;
 
   return (
@@ -30,7 +34,6 @@ export const getStaticProps = () => {
     './src/content/work-experience/_index.md'
   );
 
-  // @ts-ignore
   const allWorkExperiences = getDirectoryPages('./src/content/work-experience');
 
   return {

@@ -3,8 +3,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
-// @ts-ignore
-export const getDirectoryPages = (directory, length) => {
+export const getDirectoryPages = (directory: string, length?: number) => {
   const dirFiles = fs.readdirSync(path.join(directory));
   const pages = dirFiles.filter((file) => file.match(/^(?!_)/));
 

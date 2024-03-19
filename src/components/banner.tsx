@@ -5,8 +5,19 @@ import Markdown from '@/components/react-markdown';
 import config from '@/config/site.config.json';
 import style from '@/styles/modules/Banner.module.scss';
 
-// @ts-ignore
-const Banner = ({ banner }) => {
+interface IBanner {
+  first_name: string;
+  last_name: string;
+  bg_text: string;
+  description: string;
+  image: string;
+}
+
+interface Props {
+  banner: IBanner;
+}
+
+const Banner = ({ banner }: Props) => {
   const bannerBgText = config.settings.bannerBgText;
   const { first_name, last_name, bg_text, description, image } = banner;
 

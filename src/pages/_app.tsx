@@ -2,13 +2,13 @@ import AOS from 'aos';
 import { useEffect } from 'react';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import PlausibleProvider from 'next-plausible';
+import { AppProps } from 'next/app';
 
 import '../styles/styles.scss';
 import 'aos/dist/aos.css';
-import PlausibleProvider from 'next-plausible';
 
-// @ts-ignore
-const AverApp = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     AOS.init({
       once: true,
@@ -19,7 +19,6 @@ const AverApp = ({ Component, pageProps }) => {
 
   return (
     <section
-      // @ts-ignore
       className={`${GeistSans.variable} ${GeistMono.variable} font-primary`}
     >
       <PlausibleProvider domain="shane-jeffery.com">
@@ -29,4 +28,4 @@ const AverApp = ({ Component, pageProps }) => {
   );
 };
 
-export default AverApp;
+export default App;

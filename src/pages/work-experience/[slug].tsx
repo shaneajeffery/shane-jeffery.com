@@ -3,12 +3,19 @@ import Markdown from '@/components/react-markdown';
 import { getDirectoryPages } from '@/libs/getDirectoryPages';
 import WorkExperienceCardBlock from '@/components/work-experience-card-block';
 import Image from 'next/image';
+import {
+  ReactElement,
+  JSXElementConstructor,
+  ReactNode,
+  ReactPortal,
+  PromiseLikeOfReactNode,
+} from 'react';
 
 const WorkExperiencePage = ({
-  // @ts-ignore
   currentWorkExperience: { frontMatter, content },
-  // @ts-ignore
   allWorkExperiences,
+}: {
+  [key: string]: any;
 }) => {
   const { title, image, category, projectInfo } = frontMatter;
 
@@ -27,17 +34,33 @@ const WorkExperiencePage = ({
               </h1>
 
               <ul className="row  text-white">
-                {/* @ts-ignore */}
-                {projectInfo.map((item, index) => (
-                  <li key={index} className="col-12 mt-8">
-                    <p className="mb-2 text-xs uppercase tracking-wider text-white/50">
-                      {item.title}
-                    </p>
-                    <div className="[&_a]:underline [&_a]:hover:no-underline [&_li]:mt-1">
-                      <Markdown content={item.data} />
-                    </div>
-                  </li>
-                ))}
+                {projectInfo.map(
+                  (
+                    item: {
+                      title:
+                        | string
+                        | number
+                        | boolean
+                        | ReactElement<any, string | JSXElementConstructor<any>>
+                        | Iterable<ReactNode>
+                        | ReactPortal
+                        | PromiseLikeOfReactNode
+                        | null
+                        | undefined;
+                      data: string;
+                    },
+                    index: number
+                  ) => (
+                    <li key={index} className="col-12 mt-8">
+                      <p className="mb-2 text-xs uppercase tracking-wider text-white/50">
+                        {item.title}
+                      </p>
+                      <div className="[&_a]:underline [&_a]:hover:no-underline [&_li]:mt-1">
+                        <Markdown content={item.data} />
+                      </div>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
             <div
@@ -92,7 +115,6 @@ const WorkExperiencePage = ({
 export default WorkExperiencePage;
 
 export const getStaticPaths = async () => {
-  // @ts-ignore
   const allWorkExperiences = getDirectoryPages('./src/content/work-experience');
   const paths = allWorkExperiences.map((we) => ({
     params: {
@@ -106,9 +128,11 @@ export const getStaticPaths = async () => {
   };
 };
 
-// @ts-ignore
-export const getStaticProps = async ({ params: { slug } }) => {
-  // @ts-ignore
+export const getStaticProps = async ({
+  params: { slug },
+}: {
+  [key: string]: any;
+}) => {
   const allWorkExperiences = getDirectoryPages('./src/content/work-experience');
 
   const currentIndex = allWorkExperiences.findIndex(

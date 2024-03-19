@@ -6,18 +6,16 @@ import Link from 'next/link';
 import Banner from '@/components/banner';
 import BlogCard from '@/components/blog-card';
 import WorkExperienceCardBlock from '@/components/work-experience-card-block';
+import { Key } from 'react';
 
 const Home = ({
-  // @ts-ignore
   homepage,
-  // @ts-ignore
   workExperiencePage,
-  // @ts-ignore
   workExperiences,
-  // @ts-ignore
   blogPage,
-  // @ts-ignore
   blogPosts,
+}: {
+  [key: string]: any;
 }) => {
   const { banner } = homepage.frontMatter;
 
@@ -62,23 +60,27 @@ const Home = ({
           </div>
 
           <div className="row gy-5 md:gx-4">
-            {/* @ts-ignore */}
-            {blogPosts.map((item, index) => (
-              <div
-                key={item.slug}
-                className="init-delay sm:col-6"
-                data-aos="fade-up-sm"
-                data-aos-duration="500"
-                style={{
-                  // @ts-ignore
-                  '--lg-delay': `${(index % 3) * 75}ms`,
-                  '--md-delay': `${(index % 2) * 75}ms`,
-                  '--sm-delay': `${(index % 2) * 75}ms`,
-                }}
-              >
-                <BlogCard slug={item.slug} frontMatter={item.frontMatter} />
-              </div>
-            ))}
+            {blogPosts.map(
+              (
+                item: { slug: Key | null | undefined; frontMatter: any },
+                index: number
+              ) => (
+                <div
+                  key={item.slug}
+                  className="init-delay sm:col-6"
+                  data-aos="fade-up-sm"
+                  data-aos-duration="500"
+                  style={{
+                    // @ts-ignore
+                    '--lg-delay': `${(index % 3) * 75}ms`,
+                    '--md-delay': `${(index % 2) * 75}ms`,
+                    '--sm-delay': `${(index % 2) * 75}ms`,
+                  }}
+                >
+                  <BlogCard slug={item.slug} frontMatter={item.frontMatter} />
+                </div>
+              )
+            )}
           </div>
 
           <div className="mt-16 text-center">
