@@ -10,7 +10,7 @@ about:
 
   description: |
 
-    A full stack engineer and technical lead that loves all things Javascript with special emphasis on the React (Redux / RTK, React Query, Apollo, NextJS, Astro) and Node ecosystems (Express, GraphQL, NestJS).
+    A full stack engineer and technical lead that loves all things Javascript with special emphasis on the React (Zustand, Redux / RTK, React Query, Apollo, NextJS, Astro) and Node ecosystems (Express, GraphQL, NestJS, DrizzleORM, Postgres, MongoDB).  I am used to working in a containerized environment leveraging Docker and Kubernetes on top of either AWS or Azure.
 
     &nbsp;
 
