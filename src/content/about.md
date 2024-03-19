@@ -9,22 +9,19 @@ about:
   title: |
 
   description: |
-
-    A full stack engineer and technical lead that loves all things Javascript with special emphasis on the React (Zustand, Redux / RTK, React Query, Apollo, NextJS, Astro) and Node ecosystems (Express, GraphQL, NestJS, DrizzleORM, Postgres, MongoDB).  I am used to working in a containerized environment leveraging Docker and Kubernetes on top of either AWS or Azure.
-
-    &nbsp;
-
-    Currently (March 2024), I am spending my time learning Go through Educative.io to further my ability to run the full-stack.
+    As a seasoned full stack engineer and technical lead, I possess a strong affinity for JavaScript, particularly within the React and Node ecosystems. My expertise extends to frameworks and libraries such as Zustand, Redux/RTK, React Query, Apollo, NextJS, and Astro, as well as technologies like Express, GraphQL, NestJS, DrizzleORM, Postgres, and MongoDB. I am adept at navigating containerized environments using Docker and Kubernetes atop AWS or Azure infrastructure.
 
     &nbsp;
 
-    I thrive in dynamic environments where I can leverage my expertise to drive impactful change. While I'm open to exploring various sectors, I've discovered a deep passion for both healthcare and education. I'm drawn to these fields because I see them as areas with untapped potential, ripe for innovation and improvement. My goal is to make a significant difference where it matters most.
+    Currently, I am dedicating myself to expanding my skill set by delving into Go programming through Educative.io, enhancing my proficiency in managing the full stack.
 
     &nbsp;
 
-    One of my greatest joys is leading teams through technical challenges. I find fulfillment in mentoring others, paying forward the invaluable guidance I've received throughout my career. I believe in fostering a culture of growth and collaboration, where everyone has the opportunity to thrive and succeed.
+    My professional journey is characterized by a preference for dynamic environments where I can apply my knowledge to drive meaningful change. While my experience spans various sectors, I have developed a deep passion for healthcare and education due to their potential for innovation and advancement. My aim is to contribute significantly to these areas, effecting positive change where it is most impactful.
 
+    &nbsp;
 
+    One of my greatest joys is leading teams through technical hurdles and guiding them to success. I prioritize mentorship, drawing from the invaluable support I've received in my own career. I believe in cultivating a culture of growth and collaboration, ensuring that every team member has the opportunity to flourish.
 
     &nbsp;
 

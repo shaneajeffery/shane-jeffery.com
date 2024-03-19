@@ -5,11 +5,11 @@ banner:
   image: '/images/author.jpg'
   bg_text: 'Shane'
   description: |
-    A full stack engineer and technical lead that loves all things Javascript with special emphasis on the React (Zustand, Redux / RTK, React Query, Apollo, NextJS, Astro) and Node ecosystems (Express, GraphQL, NestJS, DrizzleORM, Postgres, MongoDB).  I am used to working in a containerized environment leveraging Docker and Kubernetes on top of either AWS or Azure.
+    As a seasoned full stack engineer and technical lead, I possess a strong affinity for JavaScript, particularly within the React and Node ecosystems. My expertise extends to frameworks and libraries such as Zustand, Redux/RTK, React Query, Apollo, NextJS, and Astro, as well as technologies like Express, GraphQL, NestJS, DrizzleORM, Postgres, and MongoDB. I am adept at navigating containerized environments using Docker and Kubernetes atop AWS or Azure infrastructure.
 
     &nbsp;
 
-    Currently (March 2024), I am spending my time learning Go through Educative.io to further my ability to run the full-stack.
+    Currently, I am dedicating myself to expanding my skill set by delving into Go programming through Educative.io, enhancing my proficiency in managing the full stack.
 
 workProcess:
   enable: false
