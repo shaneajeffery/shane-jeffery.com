@@ -5,7 +5,7 @@ banner:
   image: '/images/author.jpg'
   bg_text: 'Shane'
   description: |
-    As a seasoned full stack engineer and technical lead, I possess a strong affinity for JavaScript, particularly within the React and Node ecosystems. My expertise extends to frameworks and libraries such as Zustand, Redux/RTK, React Query, Apollo, NextJS, and Astro, as well as technologies like Express, GraphQL, NestJS, DrizzleORM, Postgres, and MongoDB. I am adept at navigating containerized environments using Docker and Kubernetes atop AWS or Azure infrastructure.
+    As a seasoned full stack engineer and technical lead, I possess a strong affinity for JavaScript utilizing Typescript within the React and Node ecosystems. My expertise extends to frameworks and libraries such as Zustand, Redux/RTK, React Query, Apollo, NextJS, and Astro, as well as technologies like Express, GraphQL, NestJS, DrizzleORM, Postgres, and MongoDB. I am adept at navigating containerized environments using Docker and Kubernetes atop AWS or Azure infrastructure.
 
     &nbsp;
 

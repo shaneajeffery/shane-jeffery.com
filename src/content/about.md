@@ -9,7 +9,7 @@ about:
   title: |
 
   description: |
-    As a seasoned full stack engineer and technical lead, I possess a strong affinity for JavaScript, particularly within the React and Node ecosystems. My expertise extends to frameworks and libraries such as Zustand, Redux/RTK, React Query, Apollo, NextJS, and Astro, as well as technologies like Express, GraphQL, NestJS, DrizzleORM, Postgres, and MongoDB. I am adept at navigating containerized environments using Docker and Kubernetes atop AWS or Azure infrastructure.
+    As a seasoned full stack engineer and technical lead, I possess a strong affinity for JavaScript utilizing Typescript within the React and Node ecosystems. My expertise extends to frameworks and libraries such as Zustand, Redux/RTK, React Query, Apollo, NextJS, and Astro, as well as technologies like Express, GraphQL, NestJS, DrizzleORM, Postgres, and MongoDB. I am adept at navigating containerized environments using Docker and Kubernetes atop AWS or Azure infrastructure.
 
     &nbsp;
 
@@ -26,37 +26,6 @@ about:
     &nbsp;
 
     <-- This is Phoenix, the Australian Shepherd, and he is shown here to add some life and let you know that he runs the household...
-
-services:
-  enable: true
-  title: 'What I can do for you'
-  subtitle: 'Services'
-  rotatingIcon: true
-  serviceLists:
-    - title: 'Strategy'
-      active: true
-      description: |
-        I analyze the needs of customers, identify potential problems, and provide valuable insights & important future decisions.
-
-    - title: 'Design'
-      active: true
-      description: |
-        I produce strong and user-friendly digital solutions in every project. My design process is about making complex solutions simple.
-
-    - title: 'Development'
-      active: true
-      description: |
-        I build scalable websites that fit needs. Fun micro-interactions, delightful animations and easily maintainable backend.
-
-    - title: 'The whole deal'
-      active: true
-      description: |
-        What sets me apart is ability to handle every aspect of web project, from branding to the implementation of your website.
-
-    - title: 'UX Research'
-      active: false
-      description: |
-        Coming Soon...
 
 whatClientsSay:
   title: 'What Coworkers Have Said'
