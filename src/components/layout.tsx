@@ -25,6 +25,25 @@ const Layout = ({ metaTitle, className, children }: Props) => {
         <meta name="keyword" content={siteConfig.metaData.keyword} />
         <meta name="description" content={siteConfig.metaData.description} />
 
+        <meta property="og:url" content="https://www.shane-jeffery.com" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:site_name"
+          content="Shane Jeffery | Professional Portfolio"
+        />
+        <meta
+          property="og:title"
+          content="Shane Jeffery | Professional Portfolio"
+        />
+        <meta
+          property="og:description"
+          content={siteConfig.metaData.description}
+        />
+        <meta
+          property="og:image"
+          content="https://www.shane-jeffery.com/images/home-thumbnail.png"
+        />
+
         <link
           rel="shortcut icon"
           href={siteConfig.favicon}
