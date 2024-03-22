@@ -3,29 +3,31 @@ title: 'About Me'
 subtitle: 'Who I Am'
 
 about:
-  images:
-    - '/images/about/01.jpg'
-
   title: |
+    About Shane Jeffery
 
   description: |
-    As a seasoned full stack engineer and technical lead, I possess a strong affinity for JavaScript utilizing Typescript within the React and Node ecosystems. My expertise extends to frameworks and libraries such as Zustand, Redux/RTK, React Query, Apollo, NextJS, and Astro, as well as technologies like Express, GraphQL, NestJS, DrizzleORM, Postgres, and MongoDB. I am adept at navigating containerized environments using Docker and Kubernetes atop AWS or Azure infrastructure.
+    I am Staff Full-Stack Software Engineer with 20+ years’ experience and have delivered scalable solutions to complex business problems. As a Technical Lead & Trusted Advisor to senior leadership and key stakeholders, I have designed and executed on  transformative projects that solved pain points and drove meaningful change. Recognized for developing and leading cross-functional teams that achieve goals and exceed expectations, I have always delivered projects on time and within budget. I have a track record of having fostered a culture of innovation and continuous improvement, building and optimizing programs that facilitate growth and strengthen operational efficiency.
 
     &nbsp;
 
-    Currently, I am dedicating myself to expanding my skill set by delving into Go programming through Educative.io, enhancing my proficiency in managing the full stack.
+    **TECHNICAL SKILLS**
 
     &nbsp;
 
-    My professional journey is characterized by a preference for dynamic environments where I can apply my knowledge to drive meaningful change. While my experience spans various sectors, I have developed a deep passion for healthcare and education due to their potential for innovation and advancement. My aim is to contribute significantly to these areas, effecting positive change where it is most impactful.
+    **Frontend:** Typescript, React, Zustand, React Query, Redux Toolkit, Apollo Graphql, Remix, NextJS, Astro, shadcn/ui, TailwindCSS, Chakra UI, Material UI, Vue, Vuex, Jest, React Testing Library, Cypress
 
     &nbsp;
 
-    One of my greatest joys is leading teams through technical hurdles and guiding them to success. I prioritize mentorship, drawing from the invaluable support I've received in my own career. I believe in cultivating a culture of growth and collaboration, ensuring that every team member has the opportunity to flourish.
+    **Backend:** Go, Gin, Chi, Node.js, Express, NestJS, Drizzle ORM, Mongoose, Prisma ORM, Supertest, Mocha, Chai, Python, FastAPI, sqlmodel, pytest, PHP, Laravel, Postgres, MongoDB, mySQL
 
     &nbsp;
 
-    <-- This is Phoenix, the Australian Shepherd, and he is shown here to add some life and let you know that he runs the household...
+    **Tooling:** Vite, Webpack, Lerna, Nx, Storybook, Chromatic
+
+    &nbsp;
+
+    **Infrastructure:** Docker, Kubernetes, Istio, Terraform, Microsoft Azure, Amazon Web Services (AWS), Microservices, Microfrontends, Concourse CI, Github Actions, OAuth, ADFS, SAML
 
 whatClientsSay:
   title: 'What Coworkers Have Said'

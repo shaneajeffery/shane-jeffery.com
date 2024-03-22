@@ -9,36 +9,15 @@ import {
   ReactElement,
   ReactNode,
   ReactPortal,
-  useEffect,
-  useState,
 } from 'react';
 
 import { A11y, Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 const About = ({ aboutPage }: { [key: string]: any }) => {
   const { title, subtitle, about, whatClientsSay } = aboutPage.frontMatter;
-
-  const [randomNumbers, setRandomNumbers] = useState<any>([]);
-
-  useEffect(() => {
-    const generateUniqueRandomNumbers = () => {
-      const numbers: any[] = [];
-      const min = -6;
-      const max = 6;
-      while (numbers.length < about.images.length) {
-        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-        if (!numbers.includes(randomNumber)) {
-          numbers.push(randomNumber);
-        }
-      }
-      setRandomNumbers(numbers);
-    };
-    generateUniqueRandomNumbers();
-  }, [about.images]);
 
   return (
     <Layout metaTitle={title}>
@@ -48,34 +27,7 @@ const About = ({ aboutPage }: { [key: string]: any }) => {
         <div className="container">
           <div className="row items-center justify-center">
             <div
-              className="col-10 mb-16 md:col-6 lg:col-4 lg:mb-0"
-              data-aos="fade-up-sm"
-            >
-              <div className="relative z-10 mx-8 cursor-pointer transition-transform duration-300 ease-out hover:scale-105">
-                {about.images.map(
-                  (item: string | StaticImport, index: number) => (
-                    <div
-                      key={index}
-                      className={`transition-transform ${index !== 0 ? `absolute left-0 top-0` : 'relative'}`}
-                      style={{
-                        zIndex: -index,
-                        transform: `rotate(${randomNumbers[index]}deg)`,
-                      }}
-                    >
-                      <Image
-                        src={item}
-                        alt="Image"
-                        width={500}
-                        height={607}
-                        className="rounded-lg bg-light/10"
-                      />
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-            <div
-              className="text-center md:col-10 lg:col-5 lg:text-left"
+              className="text-center md:col-12 lg:text-left"
               data-aos="fade-up-sm"
               data-aos-delay="100"
             >
