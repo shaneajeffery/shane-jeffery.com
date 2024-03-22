@@ -27,14 +27,8 @@ const Layout = ({ metaTitle, className, children }: Props) => {
 
         <meta property="og:url" content="https://www.shane-jeffery.com" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:site_name"
-          content="Shane Jeffery | Professional Portfolio"
-        />
-        <meta
-          property="og:title"
-          content="Shane Jeffery | Professional Portfolio"
-        />
+        <meta property="og:site_name" content={siteConfig.metaData.title} />
+        <meta property="og:title" content={siteConfig.metaData.title} />
         <meta
           property="og:description"
           content={siteConfig.metaData.description}

@@ -1,8 +1,8 @@
 {
   "metaData": {
-    "title": "Shane Jeffery",
-    "description": "Full Stack Software Engineer and Technical Lead specializing in Typescript, React, Redux, Vue, Vuex, Node, Express, Graphql, Python, Django, Flask, SqlAlchemy, SqlModel, Docker, and Kubernetes.",
-    "keyword": "full stack, software engineer, full stack software engineer, technical lead, typescript, react, redux, vue, vuex, node, express, graphql, python, fastapi, django, flask, sqlalchemy, sqlmodel, docker, kubernetes"
+    "title": "Shane Jeffery | Professional Portfolio",
+    "description": "Staff Full-Stack Software Engineer and Technical Lead specializing in Typescript, React, Zustand, Redux, React Query, Remix, NextJS, Vue, Vuex, Node, Express, NestJS, Graphql, Go, Gin, Chi, Docker, Terraform and Kubernetes.",
+    "keyword": "full stack, software engineer, full stack software engineer, technical lead, typescript, react, zustand, redux, react query, remix, nextjs, vue, vuex, node, express, graphql, nestjs, go, gin, chi, terraform, docker, kubernetes"
   },
   "baseURL": "https://www.shane-jeffery.com",
   "favicon": "/images/favicon.ico",
