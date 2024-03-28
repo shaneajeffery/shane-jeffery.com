@@ -18,33 +18,25 @@ With over two decades of software development under my belt, my expertise predom
 
 In 2018, I embarked on the React nanodegree program offered by Udacity, an experience I found exceptionally enriching. Led by Tyler McGinnis, renowned in the JavaScript and React community, the course left a lasting impression. However, due to professional commitments and personal projects consuming my time, I abstained from pursuing further educational endeavors with Udacity until now.
 
-### The journey through the course
-
-If you come from a decent programming background, this course is easily doable within 2-3 days. It is very surface level and doesn't get into Goroutines / Channels and Wait Groups / Fan-out, Fan-in in the way you would hope, which are thought to be the more advanced concepts to get a grasp on.
-
-I finished all of the lessons within 2 days, and the project took me most of the next day. The only reason it took me most of the day is because I decided to do an extra credit step for the project that required me to interface with a Postgres DB and build out all of the schema on my own.
-
-All in all, not a bad course, but definitely do it on a monthly membership and DO NOT prepay for multiple months upfront.
-
-### Where the problems lie
+### Navigating Through the Curriculum
 
 For individuals with a solid programming foundation, completing this course within 2-3 days is well within reach. However, the course content primarily scratches the surface and fails to delve into advanced Go concepts such as Goroutines, Channels, and Wait Groups, which are integral for a comprehensive grasp of the language.
 
 While the course content is satisfactory on its own, the crux of the issue lies in the inadequate support provided by Udacity's mentors, contrasting starkly with my previous experience with the React course. Despite submitting my project multiple times, mentor interactions revealed significant shortcomings, ranging from technical deficiencies to an inability to follow basic setup instructions.
 
-**Issue #1**
+**Issue #1** -- I highlighted the necessity of having Go 1.22 to resolve the encountered issue.
 
 ![Issue 1](https://www.shane-jeffery.com/images/blog/go-1.png)
 
-**Issue #2**
+**Issue #2** -- I pointed out the presence of setup instructions for the .env file in the README.
 
 ![Issue 2](https://www.shane-jeffery.com/images/blog/go-2.png)
 
-**Issue #3**
+**Issue #3** -- I emphasized the guidance in the README regarding seeding the Postgres DB and modifying the connection string in the .env file.
 
 ![Issue 3](https://www.shane-jeffery.com/images/blog/go-3.png)
 
-**Issue #4**
+**Issue #4** -- Upon being informed that mentor support for the Postgres extra credit step was unavailable, I had to revert the changes and implement a slice to manage the state of the Customer store. The edits made can be viewed here: https://github.com/shaneajeffery/udacity-go-crm-backend/commit/81baa46c9aed99fed8804f1f6c2f3987c9be491a
 
 ![Issue 4a](https://www.shane-jeffery.com/images/blog/go-4.png)
 
