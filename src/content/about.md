@@ -7,7 +7,7 @@ about:
     About Shane Jeffery
 
   description: |
-    I am Staff Full-Stack Software Engineer with 20+ years’ experience and have delivered scalable solutions to complex business problems. As a Technical Lead & Trusted Advisor to senior leadership and key stakeholders, I have designed and executed on  transformative projects that solved pain points and drove meaningful change. Recognized for developing and leading cross-functional teams that achieve goals and exceed expectations, I have always delivered projects on time and within budget. I have a track record of having fostered a culture of innovation and continuous improvement, building and optimizing programs that facilitate growth and strengthen operational efficiency.
+    I am a Lead Frontend Software Architect with 20+ years’ experience and have delivered scalable solutions to complex business problems. As a Technical Lead & Trusted Advisor to senior leadership and key stakeholders, I have designed and executed on  transformative projects that solved pain points and drove meaningful change. Recognized for developing and leading cross-functional teams that achieve goals and exceed expectations, I have always delivered projects on time and within budget. I have a track record of having fostered a culture of innovation and continuous improvement, building and optimizing programs that facilitate growth and strengthen operational efficiency.
 
     &nbsp;
 
