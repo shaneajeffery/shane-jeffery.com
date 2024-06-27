@@ -7,9 +7,9 @@ color: '#55487D'
 category: 'Healthcare'
 projectInfo:
   - title: 'Position(s) Held'
-    data: 'Lead Frontend Software Engineer -> Lead Solutions Architect'
+    data: 'Lead Frontend Software Engineer -> Lead Frontend Software Architect'
   - title: 'Dates of Employment'
-    data: '4/2021 - 3/2024'
+    data: '4/2021 - Present'
   - title: 'website'
     data: 'https://www.mckesson.com'
   - title: 'tech stack'
@@ -21,7 +21,7 @@ projectInfo:
 
 During my initial tenure at McKesson, I became privy to the challenges faced by the Clinical Information Services team, affectionately referred to as the Content team. Their struggle with outdated toolsets, particularly evident in the arduous process of content creation within both the original and new EHR products, piqued my interest. With smaller content types, such as Labs, requiring up to 10 hours for inception to production, and larger types like Regimens necessitating 1-2 days, it was evident that our workflows were hindered by obsolete ETL processes spanning multiple teams.
 
-It wasn't until my promotion to Solutions Architect in February 2023 that I found an opportunity to effect meaningful change.
+It wasn't until my promotion to Lead Architect in February 2023 that I found an opportunity to effect meaningful change.
 
 ### Problem Statement
 
